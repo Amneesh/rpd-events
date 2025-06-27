@@ -1,0 +1,26 @@
+ /* Gallery Overlay */
+ .gallery-wrapper {
+    position: relative;
+    z-index: 1;
+    padding:5rem 2rem ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .gallery-wrapper a img {
+    width: 325px;
+    height: auto;
+
+    border-radius: 10px;
+    /* border: 0.5px solid var(--color-accent-light); */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .gallery-wrapper a img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--color-accent);
+  }
