@@ -207,7 +207,7 @@
       inset 0 0 0.5em 0.25em var(--glow-color);
   }
   
-  /* maintainence */
+  /* maintainence 
 
   .maintainence{
    display: flex;
@@ -226,7 +226,8 @@
 color:var(--color-accent-light);
 text-align: center;
   }
-  /* maintainence */
+maintainence */
+
   /* headxder */
 
 
