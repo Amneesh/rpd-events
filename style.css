@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -62,19 +64,23 @@
   
   
   h2 {
+    font-family: "Space Grotesk", sans-serif;
     text-transform: uppercase;
     font-size: clamp(28px, 4vw, 36px);
   }
   
   h3 {
+    font-family: "Space Grotesk", sans-serif;
     font-size: clamp(24px, 4vw, 30px);
   }
   
   h4 {
+    font-family: "Space Grotesk", sans-serif;
     font-size: clamp(20px, 4vw, 24px);
   }
   
   h5 {
+    font-family: "Space Grotesk", sans-serif;
     font-size: clamp(16px, 4vw, 18px);
   }
   
@@ -85,14 +91,12 @@
   h5,
   h6 {
     /* font-family: "Baloo Paaji 2", sans-serif; */
-    font-family: 'Montserrat', sans-serif;
     font-weight: 100;
   
   }
   
   body {
-    /* font-family: "Open Sans", sans-serif; */
-    font-family: 'Poppins', sans-serif;
+
     font-weight: 100;
   
   }
@@ -203,7 +207,26 @@
       inset 0 0 0.5em 0.25em var(--glow-color);
   }
   
+  /* maintainence */
 
+  .maintainence{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+  }
+  .maintainence-text{
+    display: flex;
+    flex-flow: column;
+    gap:3rem;
+    justify-content: center;
+    align-items:center;
+    padding: 2rem;
+
+color:var(--color-accent-light);
+text-align: center;
+  }
+  /* maintainence */
   /* headxder */
 
 
@@ -253,6 +276,7 @@
   .nav-links a:hover::after {
     width: 100%;
   }
+
 
   
   /* header end */
