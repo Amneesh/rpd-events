@@ -284,27 +284,56 @@ maintainence */
 
 
   .hero {
-    position: relative;
-    height: 100vh;
-    background: url('./resources/landing.jpg') no-repeat center center/cover fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  position: relative;
+      min-height: 100vh; /* Banner height */
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ff00cc;
+      text-align: center;
+      background: black;
   }
-  
+  .hero-video video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: 100%;
+      height: auto;
+     z-index: 0;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      filter: brightness(1);
+    }
+  .hero-video::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+      z-index: 1;
+      pointer-events: none;
+    }
   .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(10, 10, 10, 0.8); /* dark overlay */
+    
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 2rem;
+
+    padding: 0 2rem; 
+         
+      z-index: 2; 
   }
   
   .hero-content {
@@ -352,7 +381,7 @@ maintainence */
 
 .who-we-are {
    
-    background-color: var(--color-background);
+    /* background-color: var(--color-background); */
     color: var(--color-text);
     padding: 4rem 1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
