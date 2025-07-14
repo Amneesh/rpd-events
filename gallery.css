@@ -1,4 +1,10 @@
  /* Gallery Overlay */
+.gallery-page{
+
+    background: url("./resources/dj-contact.jpg");
+  
+
+}
  .gallery-wrapper {
     position: relative;
     z-index: 1;

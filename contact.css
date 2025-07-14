@@ -1,105 +1,93 @@
+.contact-page{
+  background: url("./resources/dj-contact.jpg");
+
+}
+
 /* Section setup */
 .contact-section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    align-items: center;
-    background-color: var(--color-background);
-    color: var(--color-text);
-   
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  /* Container with flex */
-  .container {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    gap: 2rem;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  /* Left image */
-  .image-side {
-    flex: 1 1 400px;
-    height: 100%;
-    min-width: 300px;
-    border-radius: 12px;
-    overflow: hidden;
-   
-  }
-  
-  .image-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-  
-  .image-side img:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Right form */
-  .form-side {
-    flex: 1 1 400px;
-    min-width: 300px;
-    padding: 2rem;
-    border-radius: 12px;
-  
-  }
-  
-  .form-side h2 {
-    color: var(--color-heading);
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    text-shadow: var(--shadow-glow);
-  }
-  
-  /* Form elements */
-  form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--color-accent);
-    font-weight: 300;
-  }
-  
-  form input,
-  form textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    margin-bottom: 1.5rem;
-    border: none;
-    border-bottom: 0.1px solid var(--color-accent);
-    border-radius: 0px;
-    background-color: transparent;
-    color: var(--color-text);
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-    resize: vertical;
-  }
-  
-  form input:focus,
-  form textarea:focus {
-    outline: none;
-    border-color: var(--color-primary);
-    
-  }
-  
- 
-  
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  align-items: center;
+  background-color: var(--color-background);
+  color: var(--color-text);
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  
-    .image-side,
-    .form-side {
-      min-width: 100%;
-    }
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact-info {
+  max-width: 600px;
+}
+.contact-info-wrapper{
+  a{
+    text-decoration: none;
+    color: var(--color-primary);
   }
+}
+.contact-info-subwrapper{
+ 
+max-width: 300px;
+}
+
+.contact-form {
+  position: relative;
+  z-index: 1;
+  min-width: 200px;
+  border: 0.5px solid var(--color-background);
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: var(--color-background);
+  background: linear-gradient(8deg,#ff00ff3c 0%, rgba(0, 0, 0, 1) 63%);
+  backdrop-filter: blur(50px);
+
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  font-weight: 300;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  border-bottom: 0.1px solid var(--color-text);
+  border-radius: 0px;
+  background-color: transparent;
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--color-text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .image-side,
+  .form-side {
+    min-width: 100%;
+  }
+}
+
+.contact-map{
+  iframe{
+    margin-top: -15rem;
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+
+    width: 100%;
+    height: 80vh;
+  }
+}

@@ -1,80 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPD</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./flex.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RPD</title>
-  <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./flex.css">
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+    <script src="./script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-  <script src="./script.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-</head>
-
-<body>
-
-  <header class="site-header">
-    <!-- <div class="logo"><img src="./resources/rpd-logo.png" alt="rpd logo"></div>  -->
-    <nav class="nav-links">
-      <a href="./index.html">Home</a>
-      <a href="./events.html">Events</a>
-      <a href="./gallery.html">Gallery</a>
-      <a href="./contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <!-- <canvas id="banner" width="1920" height="800"></canvas> -->
-
-    <section class="hero">
-      <div class="hero-video">
-        <video autoplay muted playsinline>
-          <source src="./resources/videos/DJ-VIDEO-2.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-
-      <div class="overlay flex flex-col row-gap-2">
-        <div class="hero-content">
+  <body>
+    <header class="rpd-header">
+      <!-- <div class="logo"><img src="./resources/rpd-logo.png" alt="rpd logo"></div>  -->
+      <div class="site-header">
+        <div class="header-logo">
           <img src="./resources/rpd-logo.png" alt="">
-          <p>Where every moment becomes a celebration. We create unforgettable event experiences with light, sound, and
-            soul.</p>
-          <!-- <a href="#contact" class="rpd-button">Book Now</a> -->
-          <button class="glowbutton">Book Now</button>
-
         </div>
-      
-      <div class="counters flex flex-col sm:flex-row sm:justify-between items-start row-gap-1 sm:column-gap-2">
-        <div class="counter-container">
-          <h2 class="counter-title">Company</h2>
-        <span id="count1" class="counter-number"></span>
+        <nav class="nav-links">
+          <a href="./index.html">Home</a>
+          <a href="./events.html">Events</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div class="join-button">
+          <button class="rpd-button">JOIN US</button>
         </div>
-
-         <div class="counter-container">
-          <h2 class="counter-title">Company</h2>
-        <span id="count2" class="counter-number"></span>
-        </div>
-
-         <div class="counter-container">
-          <h2 class="counter-title">Company</h2>
-        <span id="count3" class="counter-number"></span>
-        </div>
-
-         <div class="counter-container">
-          <h2 class="counter-title">Company</h2>
-        <span id="count4" class="counter-number"></span>
-        </div>
-        
       </div>
-      </div>
-    </section>
+    </header>
 
-    <!-- <section class="maintainence">
+    <main>
+      <!-- <canvas id="banner" width="1920" height="800"></canvas> -->
+
+      <section class="hero">
+        <div class="hero-video">
+          <video autoplay muted playsinline>
+            <source src="./resources/videos/bg-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="overlay flex flex-col  justify-end items-center gap-8">
+          <div class="hero-content">
+            <img src="./resources/rpd-logo.png" alt="" />
+            <p>
+              Where every moment becomes a celebration. We create unforgettable
+              event experiences with light, sound, and soul.
+            </p>
+            <!-- <a href="#contact" class="rpd-button">Book Now</a> -->
+            <button class="glowbutton">Book Now</button>
+          </div>
+
+          <div
+            class="counters flex flex-col sm:flex-row sm:justify-evenly items-start row-gap-1 sm:column-gap-2"
+          >
+            <div class="counter-container flex flex-row sm:flex-col gap-50 sm:gap-1 items-center justify-center">
+              <div class="counter-image">
+                <img src="./resources/icons/clients.png" alt="" />
+              </div>
+              <span id="count1" class="counter-number"></span>
+              <h5 class="counter-title">Clients</h5>
+            </div>
+
+            <div class="counter-container flex flex-row sm:flex-col gap-50 sm:gap-1 items-center justify-center">
+              <div class="counter-image">
+                <img src="./resources/icons/events.png" alt="" />
+              </div>
+
+              <span id="count2" class="counter-number"></span>
+              <h5 class="counter-title">Events</h5>
+            </div>
+
+            <div class="counter-container flex flex-row sm:flex-col gap-50 sm:gap-1 items-center justify-center">
+              <div class="counter-image">
+                <img src="./resources/icons/satisfaction.png" alt="" />
+              </div>
+
+              <span id="count3" class="counter-number"></span>
+              <h5 class="counter-title">Shows</h5>
+            </div>
+
+            <div class="counter-container flex flex-row sm:flex-col gap-50 sm:gap-1 items-center justify-center">
+              <div class="counter-image">
+                <img src="./resources/icons/target.png" alt="" />
+              </div>
+
+              <span id="count4" class="counter-number"></span>
+              <h5 class="counter-title">DJ</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="maintainence">
         <div class="maintainence-container">
            <div class="maintainence-text">
             <h2>
@@ -120,164 +144,176 @@
         </div>
       </section> -->
 
-
-    <section class="who-we-are">
-      <div class="container">
-        <div class="who-we-are-content">
-          <div class="image-side">
-            <div class="who-we-are-image-container">
-              <div class="item" style="--i:0;"></div>
-              <div class="item" style="--i:1;"></div>
-              <div class="item" style="--i:2;"></div>
-              <div class="item" style="--i:3;"></div>
-              <div class="item" style="--i:4;"></div>
-              <div class="item" style="--i:5;"></div>
-              <div class="item" style="--i:6;"></div>
-              <div class="item" style="--i:7;"></div>
-              <div class="item" style="--i:8;"></div>
-              <div class="item" style="--i:9;"></div>
-              <div class="item" style="--i:10;"></div>
-              <div class="item" style="--i:11;"></div>
-              <div class="item" style="--i:12;"></div>
-              <div class="item" style="--i:13;"></div>
-              <div class="item" style="--i:14;"></div>
-              <div class="item" style="--i:15;"></div>
-              <div class="item" style="--i:16;"></div>
-              <div class="item" style="--i:17;"></div>
-              <div class="item" style="--i:18;"></div>
-              <div class="item" style="--i:19;"></div>
-              <div class="item" style="--i:20;"></div>
+      <section class="who-we-are">
+        <div class="container">
+          <div class="who-we-are-content">
+            <div class="image-side">
+              <div class="who-we-are-image-container">
+                <div class="item" style="--i: 0"></div>
+                <div class="item" style="--i: 1"></div>
+                <div class="item" style="--i: 2"></div>
+                <div class="item" style="--i: 3"></div>
+                <div class="item" style="--i: 4"></div>
+                <div class="item" style="--i: 5"></div>
+                <div class="item" style="--i: 6"></div>
+                <div class="item" style="--i: 7"></div>
+                <div class="item" style="--i: 8"></div>
+                <div class="item" style="--i: 9"></div>
+                <div class="item" style="--i: 10"></div>
+                <div class="item" style="--i: 11"></div>
+                <div class="item" style="--i: 12"></div>
+                <div class="item" style="--i: 13"></div>
+                <div class="item" style="--i: 14"></div>
+                <div class="item" style="--i: 15"></div>
+                <div class="item" style="--i: 16"></div>
+                <div class="item" style="--i: 17"></div>
+                <div class="item" style="--i: 18"></div>
+                <div class="item" style="--i: 19"></div>
+                <div class="item" style="--i: 20"></div>
+              </div>
             </div>
-          </div>
-          <div class="text-side">
-            <h2>Who We Are</h2>
-            <p>
-              At RPD Events, we specialize in creating unforgettable experiences through expert lighting décor, live DJ
-              performances, and vibrant cultural shows like Gidha and Bhangra. Our dedicated team brings passion,
-              energy, and professionalism to every event, ensuring your celebrations shine bright with neon colors and
-              memorable moments.
-            </p>
-            <p>
-              With years of experience in the event industry, we are committed to delivering exceptional service,
-              innovative solutions, and a personal touch that makes every event uniquely yours.
-            </p>
+            <div class="text-side">
+              <h2>Who We Are</h2>
+              <p>
+                At RPD Events, we specialize in creating unforgettable
+                experiences through expert lighting décor, live DJ performances,
+                and vibrant cultural shows like Gidha and Bhangra. Our dedicated
+                team brings passion, energy, and professionalism to every event,
+                ensuring your celebrations shine bright with neon colors and
+                memorable moments.
+              </p>
+              <p>
+                With years of experience in the event industry, we are committed
+                to delivering exceptional service, innovative solutions, and a
+                personal touch that makes every event uniquely yours.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="services" id="section">
-      <div class="services-container">
-
-        <!-- card 1 -->
-        <article class="services-card">
-          <div class="services-card-img">
-            <div class="card-imgs pv delete"></div>
-          </div>
-
-          <div class="project-info">
-            <div class="flex">
-              <div class="project-title">Title card</div>
-              <span class="tag">type</span>
+      <section class="services" id="section">
+        <div class="services-container">
+          <!-- card 1 -->
+          <article class="services-card">
+            <div class="services-card-img">
+              <div class="card-imgs pv delete"></div>
             </div>
-            <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
-              voluptas ullam aut incidunt minima.</span>
-<div class="show-more">
-  <button class="rpd-button">Show More</button>
-</div>
-          </div>
-        </article>
 
-        <!-- card 2 -->
-        <article class="services-card">
-          <div class="services-card-img">
-            <div class="card-imgs pv delete"></div>
-          </div>
-
-          <div class="project-info">
-            <div class="flex">
-              <div class="project-title">Title card</div>
-              <span class="tag">type</span>
+            <div class="project-info">
+              <div class="flex">
+                <div class="project-title">Title card</div>
+                <span class="tag">type</span>
+              </div>
+              <span class="lighter"
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Repudiandae voluptas ullam aut incidunt minima.</span
+              >
+              <div class="show-more">
+                <button class="rpd-button">Show More</button>
+              </div>
             </div>
-            <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
-              voluptas ullam aut incidunt minima.</span>
-          </div>
-        </article>
-        <!-- card 3 -->
+          </article>
 
-        <article class="services-card">
-          <div class="services-card-img">
-            <div class="card-imgs pv delete"></div>
-          </div>
-
-          <div class="project-info">
-            <div class="flex">
-              <div class="project-title">Title card</div>
-              <span class="tag">type</span>
+          <!-- card 2 -->
+          <article class="services-card">
+            <div class="services-card-img">
+              <div class="card-imgs pv delete"></div>
             </div>
-            <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
-              voluptas ullam aut incidunt minima.</span>
-          </div>
-        </article>
 
-        <!-- card 4 -->
-        <article class="services-card">
-          <div class="services-card-img">
-            <div class="card-imgs pv delete"></div>
-          </div>
-
-          <div class="project-info">
-            <div class="flex">
-              <div class="project-title">Title card</div>
-              <span class="tag">type</span>
+            <div class="project-info">
+              <div class="flex">
+                <div class="project-title">Title card</div>
+                <span class="tag">type</span>
+              </div>
+              <span class="lighter"
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Repudiandae voluptas ullam aut incidunt minima.</span
+              >
             </div>
-            <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
-              voluptas ullam aut incidunt minima.</span>
-          </div>
-        </article>
+          </article>
+          <!-- card 3 -->
 
-        <!-- card 5 -->
-        <article class="services-card">
-          <div class="services-card-img">
-            <div class="card-imgs pv delete"></div>
-          </div>
-
-          <div class="project-info">
-            <div class="flex">
-              <div class="project-title">Title card</div>
-              <span class="tag">type</span>
+          <article class="services-card">
+            <div class="services-card-img">
+              <div class="card-imgs pv delete"></div>
             </div>
-            <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
-              voluptas ullam aut incidunt minima.</span>
-          </div>
-        </article>
-        <!-- card 6 -->
-        <article class="services-card">
-          <div class="services-card-img">
-            <div class="card-imgs pv delete"></div>
-          </div>
 
-          <div class="project-info">
-            <div class="flex">
-              <div class="project-title">Title card</div>
-              <span class="tag">type</span>
+            <div class="project-info">
+              <div class="flex">
+                <div class="project-title">Title card</div>
+                <span class="tag">type</span>
+              </div>
+              <span class="lighter"
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Repudiandae voluptas ullam aut incidunt minima.</span
+              >
             </div>
-            <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
-              voluptas ullam aut incidunt minima.</span>
-          </div>
-        </article>
+          </article>
 
-      </div>
-    </section>
+          <!-- card 4 -->
+          <article class="services-card">
+            <div class="services-card-img">
+              <div class="card-imgs pv delete"></div>
+            </div>
 
-    <section class="full-video">
-      <video autoplay muted loop playsinline class="background-video">
-        <source src="./resources/dj-disco.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </section>
+            <div class="project-info">
+              <div class="flex">
+                <div class="project-title">Title card</div>
+                <span class="tag">type</span>
+              </div>
+              <span class="lighter"
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Repudiandae voluptas ullam aut incidunt minima.</span
+              >
+            </div>
+          </article>
 
-    <section class="services-section">
+          <!-- card 5 -->
+          <article class="services-card">
+            <div class="services-card-img">
+              <div class="card-imgs pv delete"></div>
+            </div>
+
+            <div class="project-info">
+              <div class="flex">
+                <div class="project-title">Title card</div>
+                <span class="tag">type</span>
+              </div>
+              <span class="lighter"
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Repudiandae voluptas ullam aut incidunt minima.</span
+              >
+            </div>
+          </article>
+          <!-- card 6 -->
+          <article class="services-card">
+            <div class="services-card-img">
+              <div class="card-imgs pv delete"></div>
+            </div>
+
+            <div class="project-info">
+              <div class="flex">
+                <div class="project-title">Title card</div>
+                <span class="tag">type</span>
+              </div>
+              <span class="lighter"
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Repudiandae voluptas ullam aut incidunt minima.</span
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="full-video">
+        <video autoplay muted loop playsinline class="background-video">
+          <source src="./resources/dj-disco.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <!-- <section class="services-section">
       <h2 class="section-title">Our Services</h2>
       <div class="services-grid">
 
@@ -302,36 +338,150 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
+    </main>
 
+    <div class="floating-social">
+      <button id="toggleSocial" aria-label="Toggle Social Links">
+        <i class="fas fa-share-alt"></i>
+      </button>
+      <nav
+        id="socialPopup"
+        class="social-popup hidden"
+        aria-label="Social Links"
+      >
+        <a href="tel:+1234567890" aria-label="Phone" class="icon cyan">
+          <i class="fas fa-phone"></i>
+        </a>
+        <a
+          href="mailto:info@rpdevents.com"
+          aria-label="Email"
+          class="icon magenta"
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="#" aria-label="Facebook" class="icon cyan">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" aria-label="Instagram" class="icon magenta">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </nav>
+    </div>
 
-  </main>
+    <footer class="footer-section">
+      <section class="subscription-box">
+        <div class="sub-box flex flex-row column-gap-2 items-center">
+          <div class="sub-box-title">
+            <h4>Subscribe to our events</h4>
+          </div>
+          <div class="sub-box-content">
+            <div class="sub-input-container">
+              <input
+                type="email"
+                class="subscribe-input"
+                placeholder="Enter your email"
+              />
+              <button class="subscribe-button">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer-info">
+        <h4 class="visually-hidden">Logo and description</h4>
+        <a class="footer-logo" href="#top">
+          <img src="./resources/rpd-logo.png" alt="fan bhangre de logo" />
+        </a>
+        <div class="footer-description">
+          <p>RPD</p>
+        </div>
+      </section>
 
+      <section class="footer-quick-links footer-column">
+        <h4>Quick Links</h4>
+        <div class="quick-links">
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#reviews">Client Reviews</a></li>
+            <li><a href="#instructor">Instructor</a></li>
+          </ul>
+        </div>
+      </section>
 
-  <div class="floating-social">
-    <button id="toggleSocial" aria-label="Toggle Social Links">
-      <i class="fas fa-share-alt"></i>
-    </button>
-    <nav id="socialPopup" class="social-popup hidden" aria-label="Social Links">
-      <a href="tel:+1234567890" aria-label="Phone" class="icon cyan">
-        <i class="fas fa-phone"></i>
-      </a>
-      <a href="mailto:info@rpdevents.com" aria-label="Email" class="icon magenta">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="#" aria-label="Facebook" class="icon cyan">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#" aria-label="Instagram" class="icon magenta">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </nav>
-  </div>
+      <section class="footer-contact-us footer-column">
+        <h4>Contact us</h4>
+        <div class="footer-contact">
+          <ul>
+            <li>
+              <a
+                href="tel:+12369715969"
+                class="info-item-web-content flex flex-row column-gap-1"
+              >
+                <i class="fa fa-phone"></i>
+                <p>+1 (236) 971-5969</p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:+17786287121"
+                class="info-item-web-content flex flex-row column-gap-1"
+              >
+                <i class="fa fa-phone"></i>
+                <p>+1 (778) 628-7121</p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:info@fanbhangradance.com"
+                class="info-item-web-content flex flex-row column-gap-1"
+              >
+                <i class="fa fa-envelope"></i>
+                <p>fanbhangrede@gmail.com</p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://maps.app.goo.gl/sQJMdmcLzcGtsXuEA"
+                target="_blank"
+                class="info-item-web-content flex flex-row col-gap-1 column-gap-1"
+              >
+                <i class="fa fa-location-dot"></i>
+                <p>8065 D 130 St Surrey, BC V3W 4G1</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-
-
-
-
-</body>
-
+      <section class="footer-social-media footer-column">
+        <h4>Social media</h4>
+        <div class="footer-social-media-icons">
+          <a
+            href="https://wa.me/12369715969?text=Hi!%20I'm%20interested%20in%20your%20services.%20Please%20tell%20me%20more."
+            target="_blank"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="https://www.facebook.com/fanbhangreda/" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/fanbhangrede/?hl=en"
+            target="_blank"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UC3q0f7nz5L0Znzi573fLhpg"
+            target="_blank"
+          >
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </section>
+    </footer>
+  </body>
 </html>
