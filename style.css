@@ -190,7 +190,7 @@ i {
   transform: perspective(1.5em) rotateX(35deg) scale(1, 0.7);
 }
 
-/* maintainence 
+/* maintainence
 
   .maintainence{
    display: flex;
@@ -387,6 +387,7 @@ maintainence */
 }
 
 .counter-container {
+
   .counter-image {
     /* background-color: var(--color-surface); */
 
@@ -402,15 +403,17 @@ maintainence */
   color: var(--color-text);
 }
 .counter-number {
+   min-width:150px;
   font-family: "Birthstone", cursive;
   font-weight: 400;
   font-style: normal;
   color: var(--color-accent);
-  font-size: 80px;
+  font-size: clamp(60px, 4vw, 80px);
 }
 /* who-we-ar */
 
 .who-we-are {
+  position: relative;
   background-color: var(--primary-black-color);
   color: var(--color-text);
   padding: 4rem 1rem;
@@ -907,4 +910,67 @@ maintainence */
   }
 }
 
+
+
 /* footer-section */
+/* testimonials */
+.testimonial-section{
+  min-height: 100vh;
+}
+ .underline {
+      width: 60px;
+      height: 4px;
+      background-color: #e74c3c;
+      margin: 0 auto 3rem;
+      border-radius: 2px;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      width: 100%;
+height:300px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 2rem;
+      will-change: transform;
+    }
+
+    .testimonial {
+      flex: 0 0 250px;
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: all 1s ease-in-out;
+      text-align: left;
+      opacity: 0.5;
+      transform: scale(0.9);
+    }
+
+    .testimonial.focused {
+      transform: scale(1.15);
+      opacity: 1;
+      z-index: 2;
+    }
+
+    .testimonial img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      object-fit: cover;
+    }
+
+    .testimonial h4 {
+      margin: 0.5rem 0 0.25rem;
+    }
+
+    .testimonial p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+/* testimonials */

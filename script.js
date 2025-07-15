@@ -116,3 +116,35 @@ document.addEventListener("DOMContentLoaded", () => {
  counter("count3", 0, 40, 3000);
  counter("count4", 0, 40, 3000);
 });
+
+
+ const track = document.getElementById('track');
+  const cards = track.querySelectorAll('.testimonial');
+  let scrollX = 0;
+  const speed = 1;
+
+  function animateScroll() {
+    scrollX += speed;
+    if (scrollX >= track.scrollWidth / 2) {
+      scrollX = 0;
+    }
+    track.style.transform = `translateX(${-scrollX}px)`;
+    highlightCenterCard();
+    requestAnimationFrame(animateScroll);
+  }
+
+  function highlightCenterCard() {
+    const containerCenter = window.innerWidth / 2;
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const cardCenter = rect.left + rect.width / 2;
+      const distance = Math.abs(containerCenter - cardCenter);
+      if (distance < rect.width / 2) {
+        card.classList.add('focused');
+      } else {
+        card.classList.remove('focused');
+      }
+    });
+  }
+
+  animateScroll();
