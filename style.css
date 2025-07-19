@@ -57,6 +57,7 @@ main {
 }
 
 h1 {
+  font-family: "Space Grotesk", sans-serif;
   font-size: clamp(32px, 4vw, 48px);
 }
 
@@ -529,49 +530,116 @@ maintainence */
 /* services */
 
 .services-section {
-  background-color: var(--color-background);
+  background-color: var(--primary-black-color);
   color: var(--color-text);
-  padding: 4rem 2rem;
+  padding: 4em 2rem;
   text-align: center;
+position: relative;
+z-index: 1;
+}
+.services-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('./resources/services-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust opacity here */
+  z-index: -1;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  color: var(--color-primary);
-  margin-bottom: 2rem;
-  text-shadow: var(--shadow-glow);
+.services-container {
+
+
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 2rem;
+  row-gap: 4rem;
+  padding: 1rem 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.services-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
+
 
 .service-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+ background-color: #0a0a0ab6;
+  /* border: 1px solid var(--color-border); */
+  color:var(--color-text);
+  padding: 2rem;
+  border-radius: 20px;
+
+  img{
+    width: 80px;
+    filter:invert(1);
+  }
 }
 
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px var(--color-primary-light);
+.service-btn {
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  position: relative;
+  background-color: transparent;
+  transition: .2s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 1;
+  color: var(--color-text);
 }
 
-.service-card h3 {
-  color: var(--color-heading);
-  margin-bottom: 0.5rem;
+.service-btn::after {
+  content: '';
+  border-bottom: 3px solid var(--color-border);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  margin-top: -5px;
+  top: 0;
+  left: 5px;
+  visibility: hidden;
+  opacity: 1;
+  transition: .2s linear;
 }
 
-.service-card p {
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
-  line-height: 1.4;
+.service-btn .icon {
+  transform: translateX(0%);
+  transition: .2s linear;
+  animation: attention 1.2s linear infinite;
 }
+
+.service-btn:hover::after {
+  visibility: visible;
+  opacity: 0.7;
+  width: 90%;
+}
+
+.service-btn:hover {
+  letter-spacing: 2px;
+  opacity: 1;
+}
+
+.service-btn:hover > .icon {
+  transform: translateX(30%);
+  animation: none;
+}
+
+@keyframes attention {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(30%);
+  }
+}
+
+
 
 /* Footer Styles */
 /* Footer Styles */
@@ -658,91 +726,8 @@ maintainence */
   cursor: pointer;
 }
 
-/* services */
 
-.services-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: row wrap;
-  column-gap: 2rem;
-  row-gap: 4rem;
-  padding: 1rem 2rem;
-  align-items: center;
-  justify-content: center;
-}
 
-.project-info {
-  padding: 100px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  position: relative;
-  top: -50px;
-}
-
-.project-title {
-  font-weight: 500;
-  font-size: 1.5em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: black;
-}
-
-.lighter {
-  font-size: 0.9em;
-}
-
-.tag {
-  font-weight: lighter;
-  color: grey;
-}
-
-/*DELETE THIS TWO LINE*/
-.delete {
-  background-color: #b2b2fd;
-}
-
-.card-img div {
-  width: 90%;
-}
-/*IF USING IMAGES*/
-
-.services-card {
-  background-color: white;
-  color: black;
-  width: 300px;
-  max-height: 330px;
-  border-radius: 8px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-
-.services-card-img {
-  position: relative;
-  top: -20px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-}
-
-/* Change the .card-img div to .card-img img to use img*/
-.services-card-img a,
-.services-card-img div {
-  height: 150px;
-  width: 90%;
-  /* Change this width here to change the width of the color/image */
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.card-imgs {
-  transition: all 0.5s;
-}
-
-/* services card */
 
 /* footer */
 
