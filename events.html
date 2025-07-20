@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
-    <link rel="stylesheet" href="./flex.css" />
-    <link rel="stylesheet" href="./events.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
+  <link rel="stylesheet" href="./flex.css" />
+  <link rel="stylesheet" href="./events.css" />
 
 
-    <script src="./script.js" defer></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <script src="./script.js" defer></script>
+ <script src="./events.js" defer></script>
+
 </head>
-<body>
+
+<body class="event-page">
   <header class="rpd-header">
     <!-- <div class="logo"><img src="./resources/rpd-logo.png" alt="rpd logo"></div>  -->
     <div class="site-header">
@@ -31,122 +44,291 @@
     </div>
   </header>
 
-<main>
-  <section class="page-header-wrapper events-page flex justify-center items-center">
-    <h1>EVENTS</h1>
-  </section>
-</main>
+  <main>
+    <section class="page-header-wrapper events-page flex justify-center items-center">
+      <h1>EVENTS</h1>
+    </section>
 
 
-<footer class="footer-section">
 
-  <section class="subscription-box">
-    <div class="sub-box flex flex-row column-gap-2 items-center">
-      <div class="sub-box-title">
-        <h4>Subscribe to our events</h4>
+    <section class="events-section flex flex-row">
+
+      <div class="event-description flex flex-col gap-1 justify-center items-center">
+        <h1>Events We Organize</h1>
+        <p>
+          At RPD Events, we bring your special moments to life with creativity, passion, and precision. Whether it’s an
+          intimate gathering or a grand celebration, our expertise covers a wide variety of event types to suit your
+          unique style and vision:
+        </p>
+        <ul class="flex flex-col gap-1">
+          <li><strong>Weddings:</strong> From elegant ceremonies to vibrant receptions, we craft unforgettable wedding
+            experiences tailored to your dreams.</li>
+          <li><strong>Engagements:</strong> Celebrate the beginning of your forever with charming engagement parties
+            filled with love and joy.</li>
+          <li><strong>Birthdays:</strong> Make every birthday milestone memorable with personalized themes,
+            entertainment, and decorations.</li>
+          <li><strong>Corporate Events:</strong> Professional, seamless, and impactful events designed to inspire,
+            motivate, and connect your team.</li>
+          <li><strong>Live Performances:</strong> Bring your events alive with dynamic live shows, concerts, and
+            entertainment that captivate audiences.</li>
+          <li><strong>Private Parties:</strong> Exclusive gatherings for family, friends, or special occasions that feel
+            just right for you.</li>
+          <li><strong>Cultural Shows:</strong> Showcase rich traditions and vibrant culture with authentic performances
+            and artistic presentations.</li>
+          <li><strong>School and College Festivals:</strong> Fun, energetic, and engaging events that bring students
+            together for celebration and creativity.</li>
+          <li><strong>Religious Events:</strong> Respectful and meaningful ceremonies honoring spiritual traditions and
+            community bonds.</li>
+          <li><strong>Community Events:</strong> Strengthen local ties and celebrate together with festivals, fairs, and
+            public gatherings.</li>
+        </ul>
+        <p>
+          Whatever your event, RPD Events is dedicated to making it seamless, stylish, and truly yours.
+        </p>
       </div>
-      <div class="sub-box-content">
+      <div class="wrapper">
+        <div class="inner" style="--quantity: 10;">
+          <div class="card" style="--index: 0;--color-card: 142, 249, 252;">
+            <div class="img"
+              style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80');">
+            </div>
+            <h3>Weddings</h3>
+          </div>
+          <div class="card" style="--index: 1;--color-card: 142, 252, 204;">
+            <div class="img"
+              style="background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80');">
+            </div>
+            <h3>Engagements</h3>
+          </div>
+          <div class="card" style="--index: 2;--color-card: 142, 252, 157;">
+            <div class="img"
+              style="background-image: url('https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=400&q=80');">
+            </div>
+            <h3>Birthdays</h3>
+          </div>
+          <div class="card" style="--index: 3;--color-card: 215, 252, 142;">
+            <div class="img"
+              style="background-image: url('https://images.unsplash.com/photo-1587588354456-ae376af71a25?auto=format&fit=crop&w=400&q=80');">
+            </div>
+            <h3>Corporate Events</h3>
+          </div>
+          <div class="card" style="--index: 4;--color-card: 252, 252, 142;">
+            <div class="img"
+              style="background-image: url('https://images.unsplash.com/photo-1558980663-3685c1d673c4?auto=format&fit=crop&w=400&q=80');">
+            </div>
+            <h3>Live Performances</h3>
+          </div>
+          <div class="card" style="--index: 5;--color-card: 252, 208, 142;">
+            <div class="img"
+              style="background-image: url('https://images.unsplash.com/photo-1588499756884-d72584d84df5?auto=format&fit=crop&w=400&q=80');">
+            </div>
+            <h3>Private Parties</h3>
+          </div>
+          <div class="card" style="--index: 6;--color-card: 252, 142, 142;">
+            <div class="img"
+              style="background-image: url('https://images.unsplash.com/photo-1588492885706-b8917f06df77?auto=format&fit=crop&w=400&q=80');">
+            </div>
+            <h3>Cultural Shows</h3>
+          </div>
+          <div class="card" style="--index: 7;--color-card: 252, 142, 239;">
+            <div class="img"
+              style="background-image: url('https://images.unsplash.com/photo-1588247866001-68fa8c438dd7?auto=format&fit=crop&w=400&q=80');">
+            </div>
+            <h3>School/College Fests</h3>
+          </div>
+          <div class="card" style="--index: 8;--color-card: 204, 142, 252;">
+            <div class="img"
+              style="background-image: url('https://images.unsplash.com/photo-1586521995568-39abaa0c2311?auto=format&fit=crop&w=400&q=80');">
+            </div>
+            <h3>Religious Events</h3>
+          </div>
+          <div class="card" style="--index: 9;--color-card: 142, 202, 252;">
+            <div class="img"
+              style="background-image: url('https://images.unsplash.com/photo-1572914857229-37bf6ee8101c?auto=format&fit=crop&w=400&q=80');">
+            </div>
+            <h3>Community Events</h3>
+          </div>
+        </div>
+      </div>
 
-       <div class="sub-input-container">
-        <input type="email" class="subscribe-input" placeholder="Enter your email" />
-<button class="subscribe-button"><i class="fa-solid fa-paper-plane"></i></button>
-       </div>
 
+    </section>
+
+    <section class="insta-section">
+  <h2>Event Highlights on Instagram</h2>
+  <div class="insta-grid">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="DJ Setup" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80" alt="Dance Performance" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=400&q=80" alt="LED Screens" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80" alt="Lighting Show" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=400&q=80" alt="Sound System" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=400&q=80" alt="Crowd Fun" loading="lazy" />
+  </div>
+  <a class="insta-link" href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer">View More on Instagram</a>
+</section>
+
+
+<section class="booking-cta">
+  <h2>Ready to Book Your Event?</h2>
+  <p>Contact us today to reserve your date and customize your event package!</p>
+  <a href="contact.html" class="btn-book">Book Now</a>
+</section>
+
+<section id="serviceDetails">
+<div class="swiper-container" id="servicesCarousel">
+  <div class="swiper-wrapper" id="swiperWrapper">
+    <!-- Slides inserted dynamically by JS -->
+  </div>
+  <!-- Navigation -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+</section>
+
+
+
+   <section class="faq-section">
+  <h1 >Frequently Asked Questions</h1>
+  
+  <div class="faq-container">
+    <div class="faq-card">
+      <button class="faq-toggle">How early should I book?<span class="icon">+</span></button>
+      <div class="faq-content">
+        <p>We recommend booking at least 1 to 2 months in advance to ensure availability, especially during peak event seasons. However, we do accommodate last-minute bookings based on availability.</p>
       </div>
     </div>
 
-  </section>
-  <section class="footer-info">
-    <h4 class="visually-hidden">Logo and description</h4>
-    <a class="footer-logo" href="#top">
-      <img
-        src="./resources/rpd-logo.png"
-        alt="fan bhangre de logo"
-      />
-    </a>
-    <div class="footer-description">
-      <p>RPD </p>
+    <div class="faq-card">
+      <button class="faq-toggle">Do you provide on-site support?<span class="icon">+</span></button>
+      <div class="faq-content">
+        <p>Yes, our team is present on-site throughout your event to handle setup, technical support, and any last-minute adjustments to ensure everything runs smoothly.</p>
+      </div>
     </div>
-  </section>
 
-  <section class="footer-quick-links footer-column">
-    <h4>Quick Links</h4>
-    <div class="quick-links">
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#reviews">Client Reviews</a></li>
-        <li><a href="#instructor">Instructor</a></li>
-      </ul>
+    <div class="faq-card">
+      <button class="faq-toggle">Can I customize a package?<span class="icon">+</span></button>
+      <div class="faq-content">
+        <p>Absolutely! All our packages are fully customizable. You can mix and match services, choose your preferred equipment, and personalize the experience to match your event’s theme and budget.</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="footer-contact-us footer-column">
-    <h4>Contact us</h4>
-    <div class="footer-contact">
-      <ul>
-        <li>
-          <a href="tel:+12369715969" class="info-item-web-content flex flex-row column-gap-1">
-            <i class="fa fa-phone"></i>
-            <p>+1 (236) 971-5969</p>
-          </a>
-        </li>
-        <li>
-          <a href="tel:+17786287121" class="info-item-web-content flex flex-row column-gap-1">
-            <i class="fa fa-phone"></i>
-            <p>+1 (778) 628-7121</p>
-          </a>
-        </li>
-        <li>
-          <a
-            href="mailto:info@fanbhangradance.com"
-            class="info-item-web-content flex flex-row column-gap-1"
-          >
-            <i class="fa fa-envelope"></i>
-            <p>fanbhangrede@gmail.com</p>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://maps.app.goo.gl/sQJMdmcLzcGtsXuEA"
-            target="_blank"
-            class="info-item-web-content flex flex-row col-gap-1 column-gap-1"
-          >
-            <i class="fa fa-location-dot"></i>
-            <p>8065 D 130 St Surrey, BC V3W 4G1</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
+  </main>
 
-  <section class="footer-social-media footer-column">
-    <h4>Social media</h4>
-    <div class="footer-social-media-icons">
-      <a
-        href="https://wa.me/12369715969?text=Hi!%20I'm%20interested%20in%20your%20services.%20Please%20tell%20me%20more."
-        target="_blank"
-      >
-        <i class="fa-brands fa-whatsapp"></i>
+  <div class="floating-social">
+    <button id="toggleSocial" aria-label="Toggle Social Links">
+      <i class="fas fa-share-alt"></i>
+    </button>
+    <nav id="socialPopup" class="social-popup hidden" aria-label="Social Links">
+      <a href="tel:+1234567890" aria-label="Phone" class="icon cyan">
+        <i class="fas fa-phone"></i>
       </a>
-      <a href="https://www.facebook.com/fanbhangreda/" target="_blank">
-        <i class="fa-brands fa-facebook"></i>
+      <a href="mailto:info@rpdevents.com" aria-label="Email" class="icon magenta">
+        <i class="fas fa-envelope"></i>
       </a>
-      <a
-        href="https://www.instagram.com/fanbhangrede/?hl=en"
-        target="_blank"
-      >
-        <i class="fa-brands fa-instagram"></i>
+      <a href="#" aria-label="Facebook" class="icon cyan">
+        <i class="fab fa-facebook-f"></i>
       </a>
-      <a
-        href="https://www.youtube.com/channel/UC3q0f7nz5L0Znzi573fLhpg"
-        target="_blank"
-      >
-        <i class="fa-brands fa-youtube"></i>
+      <a href="#" aria-label="Instagram" class="icon magenta">
+        <i class="fab fa-instagram"></i>
       </a>
-    </div>
-  </section>
-</footer>
+    </nav>
+  </div>
+  <footer class="footer-section">
+
+    <section class="subscription-box">
+      <div class="sub-box flex flex-row column-gap-2 items-center">
+        <div class="sub-box-title">
+          <h4>Subscribe to our events</h4>
+        </div>
+        <div class="sub-box-content">
+
+          <div class="sub-input-container">
+            <input type="email" class="subscribe-input" placeholder="Enter your email" />
+            <button class="subscribe-button"><i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <section class="footer-info">
+      <h4 class="visually-hidden">Logo and description</h4>
+      <a class="footer-logo" href="#top">
+        <img src="./resources/rpd-logo.png" alt="fan bhangre de logo" />
+      </a>
+      <div class="footer-description">
+        <p>RPD </p>
+      </div>
+    </section>
+
+    <section class="footer-quick-links footer-column">
+      <h4>Quick Links</h4>
+      <div class="quick-links">
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#reviews">Client Reviews</a></li>
+          <li><a href="#instructor">Instructor</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer-contact-us footer-column">
+      <h4>Contact us</h4>
+      <div class="footer-contact">
+        <ul>
+          <li>
+            <a href="tel:+12369715969" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-phone"></i>
+              <p>+1 (236) 971-5969</p>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+17786287121" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-phone"></i>
+              <p>+1 (778) 628-7121</p>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@fanbhangradance.com" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-envelope"></i>
+              <p>fanbhangrede@gmail.com</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/sQJMdmcLzcGtsXuEA" target="_blank"
+              class="info-item-web-content flex flex-row col-gap-1 column-gap-1">
+              <i class="fa fa-location-dot"></i>
+              <p>8065 D 130 St Surrey, BC V3W 4G1</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer-social-media footer-column">
+      <h4>Social media</h4>
+      <div class="footer-social-media-icons">
+        <a href="https://wa.me/12369715969?text=Hi!%20I'm%20interested%20in%20your%20services.%20Please%20tell%20me%20more."
+          target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/fanbhangreda/" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/fanbhangrede/?hl=en" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UC3q0f7nz5L0Znzi573fLhpg" target="_blank">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+    </section>
+  </footer>
 
 </body>
+
 </html>

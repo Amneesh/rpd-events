@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -378,46 +378,14 @@ maintainence */
   transform: scale(1.05);
 }
 
-.counters {
-  width: 100%;
-  /* position: absolute;
-    bottom: 0;
-    z-index: 4;
-    width: 100%;
-    padding: 2rem; */
-}
 
-.counter-container {
-
-  .counter-image {
-    /* background-color: var(--color-surface); */
-
-    width: 50px;
-  }
-  img {
-    aspect-ratio: 1/1;
-    filter: invert(1);
-  }
-}
-
-.counter-title {
-  color: var(--color-text);
-}
-.counter-number {
-   min-width:150px;
-  font-family: "Birthstone", cursive;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--color-accent);
-  font-size: clamp(60px, 4vw, 80px);
-}
 /* who-we-ar */
 
 .who-we-are {
   position: relative;
   background-color: var(--primary-black-color);
   color: var(--color-text);
-  padding: 4rem 1rem;
+  padding: 1rem 1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -512,13 +480,14 @@ maintainence */
 
 /* full video */
 
-.full-video {
+.counter-section {
   top: 0;
   left: 0;
   width: 100vw;
   height: 50vh;
   overflow: hidden;
   z-index: 1; /* behind everything */
+  position: relative;
 }
 
 .background-video {
@@ -527,12 +496,52 @@ maintainence */
   object-fit: cover;
 }
 
+.counter-section-content{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+
+}
+.counters {
+  width: 100%;
+  /* position: absolute;
+    bottom: 0;
+    z-index: 4;
+    width: 100%;
+    padding: 2rem; */
+}
+
+.counter-container {
+
+  .counter-image {
+    /* background-color: var(--color-surface); */
+
+    width: 50px;
+  }
+  img {
+    aspect-ratio: 1/1;
+    filter: invert(1);
+  }
+}
+
+.counter-title {
+  color: var(--color-text);
+}
+.counter-number {
+   min-width:150px;
+   font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: var(--color-accent);
+  font-size: clamp(60px, 4vw, 80px);
+}
 /* services */
 
 .services-section {
   background-color: var(--primary-black-color);
   color: var(--color-text);
-  padding: 4em 2rem;
+  padding: 1rem 2rem;
   text-align: center;
 position: relative;
 z-index: 1;
