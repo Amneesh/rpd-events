@@ -96,26 +96,39 @@ toggleBtn.addEventListener('click', () => {
   socialPopup.classList.toggle('hidden');
 });
 
+
 document.addEventListener("DOMContentLoaded", () => {
- function counter(id, start, end, duration) {
-  let obj = document.getElementById(id),
-   current = start,
-   range = end - start,
-   increment = end > start ? 1 : -1,
-   step = Math.abs(Math.floor(duration / range)),
-   timer = setInterval(() => {
-    current += increment;
-    obj.textContent = current + ' +';
-    if (current == end) {
-     clearInterval(timer);
-    }
-   }, step);
- }
- counter("count1", 0, 400, 3000);
- counter("count2", 100, 50, 2500);
- counter("count3", 0, 40, 3000);
- counter("count4", 0, 40, 3000);
+  function counter(id, start, end, duration) {
+    let obj = document.getElementById(id),
+        current = start,
+        range = end - start,
+        increment = end > start ? 1 : -1,
+        step = Math.abs(Math.floor(duration / range));
+
+    const timer = setInterval(() => {
+      current += increment;
+      obj.textContent = current + ' +';
+      if (current === end) clearInterval(timer);
+    }, step);
+  }
+
+  let hasAnimated = false;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasAnimated) {
+        hasAnimated = true;
+        counter("count1", 0, 400, 3000);
+        counter("count2", 100, 50, 2500);
+        counter("count3", 0, 40, 3000);
+        counter("count4", 0, 40, 3000);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(document.getElementById('counterSection'));
 });
+
 
 
  const track = document.getElementById('track');
