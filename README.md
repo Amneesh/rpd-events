@@ -1,1 +1,5 @@
-# rpd-events
+# rpd-evnts
+
+locations we cover
+langley \ vancouver / surrey
+

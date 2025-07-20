@@ -8,7 +8,15 @@
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./flex.css" />
 
-  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
 
   <script src="./script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -54,8 +62,6 @@
           <!-- <a href="#contact" class="rpd-button">Book Now</a> -->
           <button class="glowbutton">Book Now</button>
         </div>
-
-      
       </div>
     </section>
 
@@ -148,70 +154,65 @@
               to delivering exceptional service, innovative solutions, and a
               personal touch that makes every event uniquely yours.
             </p>
+              <div
+          class="counters flex flex-col flex-wrap sm:flex-row sm:justify-evenly items-start row-gap-1 sm:column-gap-2">
+          <div class="counter-container flex flex-row sm:flex-col items-center justify-center">
+            <!-- <div class="counter-image">
+              <img src="./resources/icons/clients.png" alt="" />
+            </div> -->
+            <span id="count1" class="counter-number"></span>
+            <h5 class="counter-title">Clients</h5>
+          </div>
+
+          <div class="counter-container flex flex-row sm:flex-col  items-center justify-center">
+            <!-- <div class="counter-image">
+              <img src="./resources/icons/events.png" alt="" />
+            </div> -->
+
+            <span id="count2" class="counter-number"></span>
+            <h5 class="counter-title">Events</h5>
+          </div>
+
+          <div class="counter-container flex flex-row sm:flex-col  items-center justify-center">
+            <!-- <div class="counter-image">
+              <img src="./resources/icons/satisfaction.png" alt="" />
+            </div> -->
+
+            <span id="count3" class="counter-number"></span>
+            <h5 class="counter-title">Shows</h5>
+          </div>
+
+          <!-- <div class="counter-container flex flex-row sm:flex-col gap-50 sm:gap-1 items-center justify-center">
+            <div class="counter-image">
+              <img src="./resources/icons/target.png" alt="" />
+            </div>
+
+            <span id="count4" class="counter-number"></span>
+            <h5 class="counter-title">DJ</h5>
+          </div> -->
+        </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="counter-section" id="counterSection">
+        <!-- <section class="counter-section">
       <video autoplay muted loop playsinline class="background-video">
         <source src="./resources/dj-disco.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+<div class="counter-section-content">
 
 
-      <div class="counter-section-content">
-        <div
-        class="counters flex flex-col flex-wrap sm:flex-row sm:justify-evenly items-start row-gap-1 sm:column-gap-2">
-        <div class="counter-container flex flex-row sm:flex-col gap-50 sm:gap-1 items-center justify-center">
-          <div class="counter-image">
-            <img src="./resources/icons/clients.png" alt="" />
-          </div>
-          <span id="count1" class="counter-number"></span>
-          <h5 class="counter-title">Clients</h5>
+    
         </div>
-        <div class="line"></div>
-        
-
-        <div class="counter-container flex flex-row sm:flex-col gap-50 sm:gap-1 items-center justify-center">
-          <div class="counter-image">
-            <img src="./resources/icons/events.png" alt="" />
-          </div>
-
-          <span id="count2" class="counter-number"></span>
-          <h5 class="counter-title">Events</h5>
-        </div>
-
-        <div class="line"></div>
-
-        <div class="counter-container flex flex-row sm:flex-col gap-50 sm:gap-1 items-center justify-center">
-          <div class="counter-image">
-            <img src="./resources/icons/satisfaction.png" alt="" />
-          </div>
-
-          <span id="count3" class="counter-number"></span>
-          <h5 class="counter-title">Shows</h5>
-        </div>
-
-        <div class="line"></div>
-        
-        <div class="counter-container flex flex-row sm:flex-col gap-50 sm:gap-1 items-center justify-center">
-          <div class="counter-image">
-            <img src="./resources/icons/target.png" alt="" />
-          </div>
-
-          <span id="count4" class="counter-number"></span>
-          <h5 class="counter-title">DJ</h5>
-        </div>
-      </div>
-      </div>
-    </section>
+    </section> -->
 
     <section class="services-section" id="section">
       <h1 >OUR SERVICES</h1>
       <div class="services-container">
         <!-- card 1 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1">
+        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="dj">
           <img src="./resources/services-icons/dj.png" alt="dj-service">
           <h3>DJ</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -245,7 +246,7 @@
         </article> -->
 
         <!-- card 2 -->
-          <article class="service-card flex flex-col justify-center items-center gap-1">
+          <article class="service-card flex flex-col justify-center items-center gap-1" data-service="led">
           <img src="./resources/services-icons/led-screen.png" alt="dj-service">
           <h3>LED SCREEN</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -275,7 +276,7 @@
           </div>
         </article> -->
         <!-- card 3 -->
- <article class="service-card flex flex-col justify-center items-center gap-1">
+ <article class="service-card flex flex-col justify-center items-center gap-1" data-service="lighting">
           <img src="./resources/services-icons/lighting.png" alt="dj-service">
           <h3>LIGHTING</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -306,7 +307,7 @@
         </article> -->
 
         <!-- card 4 -->
-          <article class="service-card flex flex-col justify-center items-center gap-1">
+          <article class="service-card flex flex-col justify-center items-center gap-1" data-service="sound">
           <img src="./resources/services-icons/sound-system.png" alt="dj-service">
           <h3>SOUND SYSTEM</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -337,7 +338,7 @@
         </article> -->
 
         <!-- card 5 -->
-          <article class="service-card flex flex-col justify-center items-center gap-1">
+          <article class="service-card flex flex-col justify-center items-center gap-1" data-service="dance">
           <img src="./resources/services-icons/dancing.png" alt="dj-service">
           <h3>DANCE PERFORMANCES</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -367,7 +368,7 @@
           </div>
         </article> -->
         <!-- card 6 -->
-          <article class="service-card flex flex-col justify-center items-center gap-1">
+          <article class="service-card flex flex-col justify-center items-center gap-1" data-service="photography">
           <img src="./resources/services-icons/photography.png" alt="dj-service">
           <h3>PHOTOGRAPHY</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -398,7 +399,7 @@
           </div>
         </article> -->
         <!-- card 7 -->
-          <article class="service-card flex flex-col justify-center items-center gap-1">
+          <article class="service-card flex flex-col justify-center items-center gap-1" data-service="brass">
           <img src="./resources/services-icons/brass-band.png" alt="dj-service">
           <h3>BRASS BAND</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -416,7 +417,6 @@
       </div>
     </section>
 
-  
 
     <section class="testimonial-section flex flex-col  justify-center ">
       <h2>What our Clients say!</h2>

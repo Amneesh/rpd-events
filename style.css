@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -385,7 +385,7 @@ margin-bottom: -8rem;
   position: relative;
   background-color: var(--primary-black-color);
   color: var(--color-text);
-  padding: 4rem 1rem;
+  padding: 1rem 1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -481,7 +481,9 @@ margin-bottom: -8rem;
 /* full video */
 
 .counter-section {
-
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 50vh;
   overflow: hidden;
   z-index: 1; /* behind everything */
@@ -496,12 +498,11 @@ margin-bottom: -8rem;
 }
 
 .counter-section-content{
-
-  height: 50vh;
-  width: 100%;
-  position:absolute;
-  top: 25%;
+  position: absolute;
+  top: 50%;
   left: 0;
+  width: 100%;
+
 }
 .counters {
   width: 100%;
@@ -512,20 +513,8 @@ margin-bottom: -8rem;
     padding: 2rem; */
 }
 
-.line {
-  width: 1px;
-  height: 50px;
-  background-color: white;
-}
-@media (max-width: 768px) {
-
-  .line {
-    width: 50px;
-    height: 1px;
-    margin: 0.5rem auto;
-  }
-}
 .counter-container {
+
   .counter-image {
     /* background-color: var(--color-surface); */
 
@@ -542,20 +531,18 @@ margin-bottom: -8rem;
 }
 .counter-number {
    min-width:150px;
-  font-family: "Birthstone", cursive;
-  font-weight: 400;
+   font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
   font-style: normal;
   color: var(--color-accent);
   font-size: clamp(60px, 4vw, 80px);
 }
-
-
 /* services */
 
 .services-section {
   background-color: var(--primary-black-color);
   color: var(--color-text);
-  padding: 4em 2rem;
+  padding: 1rem 2rem;
   text-align: center;
 position: relative;
 z-index: 1;
