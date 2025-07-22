@@ -1,8 +1,10 @@
  /* Gallery Overlay */
 .gallery-page{
 
-    background: url("./resources/dj-contact.jpg");
-  
+    background: url("./resources/gallery-bg.webp");
+   background-size: cover;
+  background-position: center;
+  background-repeat: none;
 
 }
  .gallery-wrapper {

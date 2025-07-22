@@ -1,87 +1,100 @@
-.events-page{
-    background: url("./resources/dj-contact.jpg");
+.events-page {
+  background: url("./resources/event-bg.webp");
+ background-size: cover;
+  background-position: center;
+  background-repeat: none;
+}
+
+section {
+  padding: 4rem 0rem;
+}
+
+.events-section {
+  min-height: 100vh;
+}
+/* Masonry Layout */
+/* Container Masonry Layout */
+.event-tiles {
+  column-count: 4;
+  column-gap: 0rem;
+  padding: 0rem;
+}
+
+@media (max-width: 1024px) {
+  .event-tiles {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .event-tiles {
+    column-count: 2;
+  }
+}
+
+/* Card Styling */
+.event-tile {
+  break-inside: avoid;
   
-  }
-  section{
-    padding: 4rem 0rem;
-  }
-  .events-section{
-    min-height: 100vh;
-  }
-  .event-description{
-padding: 2rem;
-    color: var(--color-text);
-  }
-.wrapper {
-  width: 100%;
-  height: 100vh;
   position: relative;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  height: 250px;
 }
 
-.inner {
-  --w: 180px;
-  --h: 200px;
-  --translateZ: calc((var(--w) + var(--h)) + 0px);
-  --rotateX: -15deg;
-  --perspective: 1000px;
-  position: absolute;
-  width: var(--w);
-  height: var(--h);
-  top: 25%;
-  left: calc(50% - (var(--w) / 2) - 2.5px);
-  z-index: 2;
-  transform-style: preserve-3d;
-  transform: perspective(var(--perspective));
-  animation: rotating 20s linear infinite; /* */
-}
-@keyframes rotating {
-  from {
-    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
-      rotateY(0);
-  }
-  to {
-    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
-      rotateY(1turn);
-  }
-}
-
-.card {
-  position: absolute;
-  border: 2px solid rgba(var(--color-primary));
-  border-radius: 12px;
-  overflow: hidden;
-  inset: 0;
-  transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
-    translateZ(var(--translateZ));
-}
-
-.img {
+.event-tile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background: #0000
-    radial-gradient(
-      circle,
-      rgba(var(--color-primary), 0.2) 0%,
-      rgba(var(--color-primary), 0.6) 80%,
-      rgba(var(--color-primary), 0.9) 100%
-    );
+  display: block;
+
+  transition: transform 0.3s ease;
+}
+
+/* Overlay */
+.event-tile-description {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.event-tile:hover .event-tile-description {
+  opacity: 1;
+}
+
+.event-tile:hover img {
+  transform: scale(1.03);
+}
+
+/* Optional: Heading */
+.event-categories h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
 
+
+
 .faq-section {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 0 20px;
+  height: 100%;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0rem 2rem;
   font-family: 'Segoe UI', sans-serif;
 
-  h1{
-    color:var(--color-text)
+  h1 {
+    color: var(--color-text)
   }
 }
 
@@ -176,38 +189,44 @@ padding: 2rem;
 
 
 #servicesCarousel {
-    width: 90%;
-    max-width: 900px;
-    margin: 50px auto;
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
 
-    position: relative;
-  }
-  .service-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .service-slide img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    object-fit: cover;
-    height: 300px;
-  }
-  .service-slide h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #e1306c;
-  }
-  .service-slide p {
-    font-size: 1.1rem;
-    max-width: 700px;
-    color: #555;
-  }
+  position: relative;
+}
 
+.service-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
+.service-slide img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  height: 300px;
+}
+
+.service-slide h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #e1306c;
+}
+
+.service-slide p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  color: #555;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  color: var(--color-accent) !important;
+}
 
 .faq-container {
   display: flex;
@@ -218,7 +237,7 @@ padding: 2rem;
 .faq-card {
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
@@ -272,5 +291,3 @@ padding: 2rem;
   color: #4b5563;
   line-height: 1.6;
 }
-
-

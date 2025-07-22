@@ -1,6 +1,8 @@
 .contact-page{
-  background: url("./resources/dj-contact.jpg");
-
+  background: url("./resources/contact-bg.webp");
+   background-size: cover;
+  background-position: top;
+  background-repeat: none;
 }
 
 /* Section setup */
@@ -38,7 +40,7 @@ max-width: 300px;
   padding: 2rem;
   border-radius: 15px;
   background-color: var(--color-background);
-  background: linear-gradient(8deg,#ff00ff3c 0%, rgba(0, 0, 0, 1) 63%);
+  background: linear-gradient(8deg,#ff00ff3c 0%, var(--color-surface) 63%);
   backdrop-filter: blur(50px);
 
 }
@@ -83,8 +85,9 @@ form textarea:focus {
 }
 
 .contact-map{
+  pointer-events: none;
   iframe{
-    margin-top: -15rem;
+    margin-top: -20rem;
     clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
 
     width: 100%;

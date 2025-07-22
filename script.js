@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
         counter("count1", 0, 400, 3000);
         counter("count2", 100, 50, 2500);
         counter("count3", 0, 40, 3000);
-        counter("count4", 0, 40, 3000);
+       // counter("count4", 0, 40, 3000);
       }
     });
   }, { threshold: 0.5 });
