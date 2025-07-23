@@ -1,3 +1,18 @@
+const toggleBtn1 = document.getElementById('menu-toggle');
+const menu = document.getElementById('slide-menu');
+
+toggleBtn1.addEventListener('click', () => {
+  toggleBtn1.classList.toggle('open');
+  menu.classList.toggle('open');
+});
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.querySelector(".dj-image-container").classList.add("show");
+  }, 2000); // 5000 ms = 5 seconds
+});
+
+
+
 const galleryData = [
     {
       thumb: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=60",

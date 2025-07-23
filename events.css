@@ -56,7 +56,7 @@ section {
 .event-tile-description {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.686);
   color: white;
   padding: 1rem;
   opacity: 0;
@@ -72,18 +72,95 @@ section {
 }
 
 .event-tile:hover img {
-  transform: scale(1.03);
+  transform: scale(1.3);
 }
 
 /* Optional: Heading */
 .event-categories h1 {
+  color: var(--color-text);
   text-align: center;
-  margin-bottom: 1rem;
-  font-size: 2rem;
+
+}
+
+
+/* why us */
+.why-us{
+  color:var(--color-text);
+}
+.why-us-description{
+  max-width: 600px;
 }
 
 
 
+.stack {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  transition: 0.25s ease;
+ transform: rotate(5deg);
+    .card:before {
+      transform: translatey(-2%) rotate(-4deg);
+    }
+    .card:after {
+      transform: translatey(2%) rotate(4deg);
+    }
+  
+}
+
+
+.why-us-card {
+  aspect-ratio: 3 / 2;
+  border: 1px solid var(--primary-black-color);
+  background-color: #fff;
+  position: relative;
+  transition: 0.15s ease;
+  cursor: pointer;
+  padding: 5% 5% 15% 5%;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 4px solid;
+    background-color: #fff;
+    transform-origin: center center;
+    z-index: -1;
+    transition: 0.15s ease;
+    top: 0;
+    left: 0;
+  }
+
+  &:before {
+    transform: translatey(-2%) rotate(-6deg);
+  }
+
+  &:after {
+    transform: translatey(2%) rotate(6deg);
+  }
+}
+.image {
+  width: 100%;
+  border: 4px solid var(--primary-black-color);
+  background-color: #eee;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.browser-warning {
+  margin-bottom: 4rem;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .browser-warning {
+    display: none;
+  }
+}
+
+
+/* why us */
 
 .faq-section {
   height: 100%;
