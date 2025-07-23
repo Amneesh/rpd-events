@@ -12,11 +12,8 @@
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
 
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
 
   <script src="./script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -26,9 +23,9 @@
   <header class="rpd-header">
     <!-- <div class="logo"><img src="./resources/rpd-logo.png" alt="rpd logo"></div>  -->
     <div class="site-header">
-      <div class="header-logo">
+      <!-- <div class="header-logo">
         <img src="./resources/rpd-logo.png" alt="">
-      </div>
+      </div> -->
       <nav class="nav-links">
         <a href="./index.html">Home</a>
         <a href="./events.html">Events</a>
@@ -62,6 +59,30 @@
           <!-- <a href="#contact" class="rpd-button">Book Now</a> -->
           <button class="glowbutton">Book Now</button>
         </div>
+      </div>
+      <div class="hero-container flex flex-col md:flex-row justify-between gap-2">
+        <div class="hero-sub-container left">
+          <h4>
+            Discover the Magic of RPD Events
+          </h4>
+          <div class="hero-container-content flex flex-col items-start gap-25">
+            <p>From Bhangra beats to brilliant lights, </p>
+            <p>We don’t just throw events — we create unforgettable moments.</p>
+            <p>📱 Follow us: @rpdevents</p>
+          </div>
+        </div>
+
+         <div class="hero-sub-container right">
+          <h4>
+            Discover the Magic of RPD Events
+          </h4>
+          <div class="hero-container-content flex flex-col items-start gap-25">
+            <p>From Bhangra beats to brilliant lights, </p>
+            <p>We don’t just throw events — we create unforgettable moments.</p>
+            <p>📱 Follow us: @rpdevents</p>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -141,6 +162,7 @@
           </div>
           <div class="text-side">
             <h1>Who We Are</h1>
+            
             <p>
               At RPD Events, we specialize in creating unforgettable
               experiences through expert lighting décor, live DJ performances,
@@ -154,49 +176,48 @@
               to delivering exceptional service, innovative solutions, and a
               personal touch that makes every event uniquely yours.
             </p>
-              <div
-          class="counters flex flex-col flex-wrap sm:flex-row sm:justify-evenly items-start row-gap-1 sm:column-gap-2">
-          <div class="counter-container flex flex-row sm:flex-col items-center justify-center">
-            <!-- <div class="counter-image">
+            <div
+              class="counters flex flex-col flex-wrap sm:flex-row sm:justify-evenly items-start row-gap-1 sm:column-gap-2"
+              id="counterSection">
+              <div class="counter-container flex flex-row sm:flex-col items-center justify-center">
+                <!-- <div class="counter-image">
               <img src="./resources/icons/clients.png" alt="" />
             </div> -->
-            <span id="count1" class="counter-number"></span>
-            <h5 class="counter-title">Clients</h5>
-          </div>
+                <span id="count1" class="counter-number"></span>
+                <h5 class="counter-title">Clients</h5>
+              </div>
 
-          <div class="counter-container flex flex-row sm:flex-col  items-center justify-center">
-            <!-- <div class="counter-image">
+              <div class="counter-container flex flex-row sm:flex-col  items-center justify-center">
+                <!-- <div class="counter-image">
               <img src="./resources/icons/events.png" alt="" />
             </div> -->
 
-            <span id="count2" class="counter-number"></span>
-            <h5 class="counter-title">Events</h5>
-          </div>
+                <span id="count2" class="counter-number"></span>
+                <h5 class="counter-title">Events</h5>
+              </div>
 
-          <div class="counter-container flex flex-row sm:flex-col  items-center justify-center">
-            <!-- <div class="counter-image">
+              <div class="counter-container flex flex-row sm:flex-col  items-center justify-center">
+                <!-- <div class="counter-image">
               <img src="./resources/icons/satisfaction.png" alt="" />
             </div> -->
 
-            <span id="count3" class="counter-number"></span>
-            <h5 class="counter-title">Shows</h5>
-          </div>
+                <span id="count3" class="counter-number"></span>
+                <h5 class="counter-title">Shows</h5>
+              </div>
 
-          <!-- <div class="counter-container flex flex-row sm:flex-col gap-50 sm:gap-1 items-center justify-center">
-            <div class="counter-image">
-              <img src="./resources/icons/target.png" alt="" />
             </div>
-
-            <span id="count4" class="counter-number"></span>
-            <h5 class="counter-title">DJ</h5>
-          </div> -->
-        </div>
           </div>
         </div>
       </div>
     </section>
 
-        <!-- <section class="counter-section">
+    <section class="join-us">
+      <div class="join-us-container flex flex-col items-center justify-center gap-1">
+        <h1>Still booking boring <span class="color-accent">Events ?</span> That’s a bold choice</h1>
+        <button class="rpd-button">GET A QUOTE</button>
+      </div>
+    </section>
+    <!-- <section class="counter-section">
       <video autoplay muted loop playsinline class="background-video">
         <source src="./resources/dj-disco.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -209,8 +230,9 @@
     </section> -->
 
     <section class="services-section" id="section">
-      <h1 >OUR SERVICES</h1>
-      <div class="services-container">
+      <h1>OUR SERVICES</h1>
+       <div class="underline"></div>
+      <div class="services-container flex flex-wrap flex-row justify-evenly items-center col-gap-1 row-gap-1">
         <!-- card 1 -->
         <article class="service-card flex flex-col justify-center items-center gap-1" data-service="dj">
           <img src="./resources/services-icons/dj.png" alt="dj-service">
@@ -227,26 +249,9 @@
             </svg>
           </button>
         </article>
-        <!-- <article class="services-card">
-          <div class="services-card-img">
-            <div class="card-imgs pv delete"></div>
-          </div>
-
-          <div class="project-info">
-            <div class="flex">
-              <div class="project-title">Title card</div>
-              <span class="tag">type</span>
-            </div>
-            <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Repudiandae voluptas ullam aut incidunt minima.</span>
-            <div class="show-more">
-              <button class="rpd-button">Show More</button>
-            </div>
-          </div>
-        </article> -->
-
+    
         <!-- card 2 -->
-          <article class="service-card flex flex-col justify-center items-center gap-1" data-service="led">
+        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="led">
           <img src="./resources/services-icons/led-screen.png" alt="dj-service">
           <h3>LED SCREEN</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -261,22 +266,9 @@
             </svg>
           </button>
         </article>
-        <!-- <article class="services-card">
-          <div class="services-card-img">
-            <div class="card-imgs pv delete"></div>
-          </div>
-
-          <div class="project-info">
-            <div class="flex">
-              <div class="project-title">Title card</div>
-              <span class="tag">type</span>
-            </div>
-            <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Repudiandae voluptas ullam aut incidunt minima.</span>
-          </div>
-        </article> -->
+      
         <!-- card 3 -->
- <article class="service-card flex flex-col justify-center items-center gap-1" data-service="lighting">
+        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="lighting">
           <img src="./resources/services-icons/lighting.png" alt="dj-service">
           <h3>LIGHTING</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -291,23 +283,9 @@
             </svg>
           </button>
         </article>
-        <!-- <article class="services-card">
-          <div class="services-card-img">
-            <div class="card-imgs pv delete"></div>
-          </div>
-
-          <div class="project-info">
-            <div class="flex">
-              <div class="project-title">Title card</div>
-              <span class="tag">type</span>
-            </div>
-            <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Repudiandae voluptas ullam aut incidunt minima.</span>
-          </div>
-        </article> -->
-
+     
         <!-- card 4 -->
-          <article class="service-card flex flex-col justify-center items-center gap-1" data-service="sound">
+        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="sound">
           <img src="./resources/services-icons/sound-system.png" alt="dj-service">
           <h3>SOUND SYSTEM</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -322,23 +300,10 @@
             </svg>
           </button>
         </article>
-        <!-- <article class="services-card">
-          <div class="services-card-img">
-            <div class="card-imgs pv delete"></div>
-          </div>
-
-          <div class="project-info">
-            <div class="flex">
-              <div class="project-title">Title card</div>
-              <span class="tag">type</span>
-            </div>
-            <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Repudiandae voluptas ullam aut incidunt minima.</span>
-          </div>
-        </article> -->
+      
 
         <!-- card 5 -->
-          <article class="service-card flex flex-col justify-center items-center gap-1" data-service="dance">
+        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="dance">
           <img src="./resources/services-icons/dancing.png" alt="dj-service">
           <h3>DANCE PERFORMANCES</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -353,22 +318,9 @@
             </svg>
           </button>
         </article>
-        <!-- <article class="services-card">
-          <div class="services-card-img">
-            <div class="card-imgs pv delete"></div>
-          </div>
-
-          <div class="project-info">
-            <div class="flex">
-              <div class="project-title">Title card</div>
-              <span class="tag">type</span>
-            </div>
-            <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Repudiandae voluptas ullam aut incidunt minima.</span>
-          </div>
-        </article> -->
+      
         <!-- card 6 -->
-          <article class="service-card flex flex-col justify-center items-center gap-1" data-service="photography">
+        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="photography">
           <img src="./resources/services-icons/photography.png" alt="dj-service">
           <h3>PHOTOGRAPHY</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -399,7 +351,7 @@
           </div>
         </article> -->
         <!-- card 7 -->
-          <article class="service-card flex flex-col justify-center items-center gap-1" data-service="brass">
+        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="brass">
           <img src="./resources/services-icons/brass-band.png" alt="dj-service">
           <h3>BRASS BAND</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -419,7 +371,7 @@
 
 
     <section class="testimonial-section flex flex-col  justify-center ">
-      <h2>What our Clients say!</h2>
+      <h1>What our Clients say!</h1>
       <div class="underline"></div>
       <div class="testimonial-box">
 
@@ -482,7 +434,7 @@
     </section>
 
 
-   
+
   </main>
 
   <div class="floating-social">
