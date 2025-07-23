@@ -22,13 +22,13 @@ section {
 
 @media (max-width: 1024px) {
   .event-tiles {
-    column-count: 3;
+    column-count: 2;
   }
 }
 
 @media (max-width: 600px) {
   .event-tiles {
-    column-count: 2;
+    column-count: 1;
   }
 }
 
@@ -85,9 +85,28 @@ section {
 
 /* why us */
 .why-us{
+position: relative;
+min-height: 100vh;
   color:var(--color-text);
 }
+.why-us::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('./resources/why-us-bg.jpg');
+  background-size: cover;
+  background-position: top;
+  filter: contrast(2) brightness(0.5); /* You can customize this */
+  z-index: 0;
+}
+.why-us-container{
+  padding: 0rem 1rem;
+   position: absolute;
+  width: 100%;
+}
 .why-us-description{
+ 
+
   max-width: 600px;
 }
 
