@@ -20,15 +20,15 @@ padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+
 }
 
 .inner {
-  --w: 180px;
+  --w: 100px;
   --h: 200px;
   --translateZ: calc((var(--w) + var(--h)) + 0px);
   --rotateX: -15deg;
-  --perspective: 1000px;
+  --perspective: 5000px;
   position: absolute;
   width: var(--w);
   height: var(--h);

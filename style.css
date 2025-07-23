@@ -382,6 +382,7 @@ margin-bottom: -8rem;
 /* who-we-ar */
 
 .who-we-are {
+  min-height: 100vh;
   position: relative;
   background-color: var(--primary-black-color);
   color: var(--color-text);

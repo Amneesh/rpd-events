@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, { threshold: 0.5 });
 
-  observer.observe(document.getElementById('counterSection'));
+  observer.observe(document.getElementById('whoWeAre'));
 });
 
 
