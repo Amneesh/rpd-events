@@ -5,101 +5,63 @@ toggleBtn1.addEventListener('click', () => {
   toggleBtn1.classList.toggle('open');
   menu.classList.toggle('open');
 });
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    document.querySelector(".dj-image-container").classList.add("show");
-  }, 2000); // 5000 ms = 5 seconds
+
+const toggleBtn = document.getElementById('toggleSocial');
+const socialPopup = document.getElementById('socialPopup');
+
+toggleBtn.addEventListener('click', () => {
+  socialPopup.classList.toggle('hidden');
 });
 
 
-
-const galleryData = [
-    {
-      thumb: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=60",
-      full: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
-      alt: "DJ Party 1"
-    },
-    {
-      thumb: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=60",
-      full: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80",
-      alt: "DJ Party 2"
-    },
-    {
-      thumb: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=400&q=60",
-      full: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1200&q=80",
-      alt: "DJ Party 3"
-    },
-    {
-        thumb: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=60",
-        full: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
-        alt: "DJ Party 1"
-      },
-      {
-        thumb: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=60",
-        full: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80",
-        alt: "DJ Party 2"
-      },
-      {
-        thumb: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=400&q=60",
-        full: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1200&q=80",
-        alt: "DJ Party 3"
-      },
-      {
-        thumb: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=60",
-        full: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
-        alt: "DJ Party 1"
-      },
-      {
-        thumb: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=60",
-        full: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80",
-        alt: "DJ Party 2"
-      },
-      {
-        thumb: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=400&q=60",
-        full: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1200&q=80",
-        alt: "DJ Party 3"
-      },
-      {
-        thumb: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=60",
-        full: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
-        alt: "DJ Party 1"
-      },
-      {
-        thumb: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=60",
-        full: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80",
-        alt: "DJ Party 2"
-      },
-      {
-        thumb: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=400&q=60",
-        full: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1200&q=80",
-        alt: "DJ Party 3"
-      },
-  ];
-  
  if (document.body.classList.contains("gallery-page")) {
-    const galleryContainer = document.getElementById("lightgallery");
-    if (galleryContainer && typeof lightGallery !== 'undefined') {
-      galleryData.forEach(({ thumb, full, alt }) => {
-        const link = document.createElement('a');
-        link.href = full;
-        const img = document.createElement('img');
-        img.src = thumb;
-        img.alt = alt;
-        link.appendChild(img);
-        galleryContainer.appendChild(link);
-      });
 
-      lightGallery(galleryContainer, {
-        selector: 'a',
-        download: true,
-        thumbnail: true,
-        zoom: true,
-        fullscreen: true,
-        autoplay: false,
-        loop: true,
-        speed: 500,
-      });
-    }
+  const imageData = [
+  { src: "http://unsplash.it/600?image=50", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=10", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=70", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=200", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=90", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=450", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=239", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=510", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=315", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=199", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=78", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=116", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=95", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=87", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=329", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=81", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=122", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=206", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=62", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=331", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=159", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=310", link: "https://www.instagram.com/CodePen/" },
+  { src: "http://unsplash.it/600?image=77", link: "https://www.instagram.com/CodePen/" }
+];
+
+
+
+    const galleryContainer = document.getElementById("imageGrid");
+
+imageData.forEach(({ src, link }) => {
+  const gridItem = document.createElement("div");
+  gridItem.classList.add("grid-item");
+
+  const anchor = document.createElement("a");
+  anchor.href = link;
+  anchor.target = "_blank";
+
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = "Instagram Image";
+
+  anchor.appendChild(img);
+  gridItem.appendChild(anchor);
+  galleryContainer.appendChild(gridItem);
+});
   }
  if (document.body.classList.contains("event-page")) {
 
@@ -226,11 +188,16 @@ window.addEventListener("load", () => {
 
 
   }
-  const toggleBtn = document.getElementById('toggleSocial');
-const socialPopup = document.getElementById('socialPopup');
 
-toggleBtn.addEventListener('click', () => {
-  socialPopup.classList.toggle('hidden');
+
+
+
+if (document.body.classList.contains("home-page")) {
+
+  document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.querySelector(".dj-image-container").classList.add("show");
+  }, 2000); 
 });
 
 
@@ -312,7 +279,7 @@ document.querySelectorAll('.service-card').forEach(card => {
 
 
 
-
+}
 
 
 
