@@ -485,6 +485,7 @@ background-color: var(--color-surface);
   background-color: var(--color-surface);
   color: var(--color-text);
   text-align: left;
+  transition: all 0.6s ease;
 
 }
 .dj-image-container {
@@ -508,6 +509,10 @@ background-color: var(--color-surface);
   border-radius: 0;
 }
 @media (max-width: 1000px) {
+  .hero-sub-container{
+    transition: all 0.6s ease;
+    margin: 0 auto;
+  }
   .dj-image-container {
     display: none;
   }
