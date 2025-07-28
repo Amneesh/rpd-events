@@ -33,6 +33,16 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const topImg = document.querySelector(".hero-img-top");
+  const bottomImg = document.querySelector(".hero-img-bottom");
+
+  setTimeout(() => {
+    topImg.classList.add("show");
+    bottomImg.classList.add("show");
+  }, 2000); // Show after 1 second
+});
+
 
  if (document.body.classList.contains("gallery-page")) {
 

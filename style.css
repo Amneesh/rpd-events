@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Birthstone&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -224,50 +226,28 @@ height: 50px;
   transition: 100ms;
 }
 
-/* From Uiverse.io by InfinityLoopGames */
-.glowbutton {
-  --glow-color: var(--color-accent);
-  --glow-spread-color: var(--color-accent-light);
-  --enhanced-glow-color: var(--color-background);
-  --btn-color: var(--color-background);
-  border: 1px solid var(--color-accent);
-  min-width: 125px;
-  padding: 0.75rem 1.5rem;
-  color: var(--color-accent);
-
-  background-color: var(--color-background);
-  border-radius: 30px;
-  outline: none;
-  box-shadow: 0 0 50px 5px var(--glow-color),
-    0 0 10px 0em var(--glow-spread-color);
-  text-shadow: 0 0 0.5em var(--glow-color);
-  position: relative;
-  transition: all 0.3s;
-}
-
-.glowbutton::after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  top: 120%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--glow-spread-color);
-  filter: blur(2em);
-  opacity: 0.7;
-  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
-  transition: all 0.5s ease-in-out;
-}
-.glowbutton:hover::after {
-  opacity: 1;
-  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.7);
-}
-
-
 
 /* headxder */
-
+.rpd-header {
+  background-color: var(--color-surface);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 999999999;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+.rpd-logo{
+  width: 130px;
+  height: auto;
+  position: absolute;
+  left: 0;
+}
 
 /* Hamburger Base Styles */
 
@@ -290,7 +270,7 @@ height: 50px;
 .hamburger span {
   display: block;
   height: 4px;
-  background: white;
+  background: var(--color-accent);
   border-radius: 2px;
   width: 100%;
   transition: all 0.4s ease;
@@ -365,26 +345,7 @@ height: 50px;
   font-size: clamp(28px, 4vw, 36px);
 }
 
-/* .site-header {
-  border-radius: 25px;
 
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-background-color: var(--color-surface);
-  backdrop-filter: blur(10px);
-
-  padding: 1rem 2rem;
-} */
-
-/* .header-logo {
-  width: 100px;
-  img {
-    aspect-ratio: 3/1;
-  }
-} */
 
 .nav-links a {
   color: var(--color-text);
@@ -468,20 +429,81 @@ background-color: var(--color-surface);
   z-index: 1;
   pointer-events: none;
 }
+
 @media only screen and (min-width:600px){
   .hero-video video {
     filter: brightness(0.5) contrast(1) hue-rotate(30deg);
   }
 }
+.hero-img-top,
+.hero-img-bottom {
+  position: absolute;
+  width: 100%;
+  height: 50vh; /* exactly half the viewport height */
+  overflow: hidden;
+  z-index: 1.5; /* Just above video, below overlay */
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.hero-img-top {
+  top: 0;
+  transform: translateY(-100%);
+}
+.hero-img-bottom {
+  bottom: 0;
+  transform: translateY(100%);
+}
+
+.hero-img-top img,
+.hero-img-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+.hero-img-top img{
+    object-position: bottom; /* adjust for top half */
+  display: block;
+}
+
+.hero-img-bottom img {
+  object-position: top; /* adjust for bottom half */
+}
+
+/* Animate class */
+.hero-img-top.show,
+.hero-img-bottom.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* @media screen and (min-width: 1200px) {
+  .hero-img-top{
+height: 50%;
+img{
+ object-position: bottom;
+}
+
+  }
+  .hero-img-bottom {
+    height: 50%;
+    img{
+ object-position: top;
+}
+
+
+} */
+
 .overlay {
   position: absolute;
-  top: -40px;
+  top: -10%;
   left: 0;
   width: 100%;
   min-height: 100vh;
   padding: 4rem;
 
-  padding: 0 2rem;
+  padding: 0 2rem 5rem 2rem;
 
   z-index: 2;
 }
@@ -496,19 +518,8 @@ background-color: var(--color-surface);
   height: auto;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  color: var(--color-primary);
-  text-shadow: var(--shadow-glow);
-  margin-bottom: 1rem;
-}
 
-.hero-content p {
-  font-size: 1.25rem;
-  color: var(--color-text-muted);
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
+
 
 .hero-btn {
   background-color: var(--color-primary);
@@ -535,73 +546,27 @@ background-color: var(--color-surface);
   bottom: 10px;
   z-index: 999999;
 }
-.inspiring-quote {
-  margin: 0px auto;
+.hero-heading{
+  max-width: 1100px;
+   font-family: "Quattrocento", serif;
+   text-align: center;
+   padding: 1rem 1rem;
+   word-spacing: 10px;
+   font-size: clamp(30px, 4vw, 60px) !important;
+   font-style: oblique;
 
-  position: relative;
-
-  max-width: 800px;
-
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  opacity: 0;
-  animation: fadeIn 1.2s ease-in-out forwards;
+   span{
+    font-style: normal;
+     font-size: clamp(40px, 4vw, 80px) !important;
+   }
+}
+.hero-description{
+  
+  letter-spacing: 8px;
+   padding: 1rem 1rem 2rem 1rem;
+   line-height: 1.2rem;
 }
 
-/* Large quotes properly placed */
-.inspiring-quote p::before,
-.inspiring-quote p::after {
-  font-size: clamp(40px, 5vw, 80px);
-
-  position: absolute;
-}
-
-.inspiring-quote p::before {
-  font-family: "Georgia", serif;
-
-  content: "“";
-  left: -10px;
-  top: -30px;
-}
-
-.inspiring-quote p::after {
-  content: "”";
-  font-family: "Georgia", serif;
-
-  right: -10px;
-  bottom: -30px;
-}
-
-.inspiring-quote p {
-  margin: 0;
-  color: var(--color-text);
-  padding: 2vw;
-  font-size: clamp(28px, 4vw, 32px);
-  display: inline-block;
-  position: relative;
-  font-style: italic;
-  font-weight: 400;
-  max-width: 90%;
-  text-align: center;
-}
-
-/* Properly sized and spaced citation */
-.inspiring-quote cite {
-  display: block;
-  width: 100%;
-  text-align: right;
-  font-size: clamp(16px, 2vw, 20px);
-  font-weight: 100;
-  color: var(--color-primary);
-  opacity: 0.3;
-  margin-top: 0px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-style: normal;
-}
 
 /* Subtle Fade-in Animation */
 @keyframes fadeIn {
@@ -615,33 +580,6 @@ background-color: var(--color-surface);
   }
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  :root {
-    --quote-padding: 6vw;
-  }
-
-  .inspiring-quote {
-    padding: var(--quote-padding);
-  }
-
-  .inspiring-quote p {
-    font-size: clamp(20px, 4vw, 30px);
-  }
-
-  .inspiring-quote p::before,
-  .inspiring-quote p::after {
-    font-size: clamp(50px, 6vw, 70px);
-  }
-
-  .inspiring-quote cite {
-    font-size: clamp(16px, 1.8vw, 22px);
-  }
-}
-
-.inspiring-quote {
-  margin: 25px;
-}
 
 .arrows {
   width: 60px;

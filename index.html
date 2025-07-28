@@ -21,20 +21,26 @@
 <body class="home-page">
 
   <header class="rpd-header">
-    <button id="menu-toggle" class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
 
-    <nav id="slide-menu" class="nav-links">
-      <ul>
-        <li> <a href="./index.html">Home</a></li>
-        <li><a href="./events.html">Events</a></li>
-        <li> <a href="./gallery.html">Gallery</a></li>
-        <li> <a href="./contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="rpd-logo">
+      <a href="./index.html"><img  src="./resources/rpd-logo.png" alt="" /></a>
+
+    </div>
+    <div class="header">
+      <button id="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="slide-menu" class="nav-links">
+        <ul>
+          <li> <a href="./index.html">Home</a></li>
+          <li><a href="./events.html">Events</a></li>
+          <li> <a href="./gallery.html">Gallery</a></li>
+          <li> <a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -48,15 +54,24 @@
           Your browser does not support the video tag.
         </video>
       </div>
+      <div class="hero-img-top">
+  <img src="./resources/bg-top.jpg" alt="Top Overlay" />
+</div>
+<div class="hero-img-bottom">
+  <img src="./resources/bg-bottom.jpg" alt="Bottom Overlay" />
+</div>
 
-      <div class="overlay flex flex-col  justify-center items-center gap-8">
+      <div class="overlay flex flex-col  justify-end items-center gap-8">
         <div class="hero-content">
-          <img class="animate-flip-x" src="./resources/rpd-logo.png" alt="" />
-
-          <blockquote class="inspiring-quote">
+          <p class="hero-description color-accent">RPD EVENTS</p>
+          <!-- <img class="animate-flip-x" src="./resources/rpd-logo.png" alt="" /> -->
+         
+<p class="hero-heading">Turning Your <span class="color-accent">CELEBRATIONS</span> into <span class="color-accent">SIGNATURE</span> experiences</p>
+<p class="hero-description color-primary">SURREY | LANGLEY | VANCOUVER | BURNABY</p>
+          <!-- <blockquote class="inspiring-quote">
             <p> We put in the hours you don’t see, so you can enjoy the moments you never forget.</p>
             <cite>RPD EVENTS</cite>
-          </blockquote>
+          </blockquote> -->
 
           <div class="hero-buttons flex flex-row flex-wrap gap-1 justify-center items-center">
             <button class="rpd-button-secondary">GET A QUOTE</button>
@@ -174,7 +189,7 @@
       <div class="underline"></div>
       <div class="services-container flex flex-wrap flex-row justify-evenly items-center gap-4">
         <!-- card 1 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.2s" data-service="dj">
+        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.1s" data-service="dj">
           <img src="./resources/services-icons/dj.png" alt="dj-service">
           <h3>DJ</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -191,7 +206,7 @@
         </article>
 
         <!-- card 2 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.4s" data-service="led">
+        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.2s" data-service="led">
           <img src="./resources/services-icons/led-screen.png" alt="dj-service">
           <h3>LED SCREEN</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -208,7 +223,7 @@
         </article>
 
         <!-- card 3 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.6s" data-service="lighting">
+        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.3s" data-service="lighting">
           <img src="./resources/services-icons/lighting.png" alt="dj-service">
           <h3>LIGHTING</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -225,7 +240,7 @@
         </article>
 
         <!-- card 4 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.8s" data-service="sound">
+        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.4s" data-service="sound">
           <img src="./resources/services-icons/sound-system.png" alt="dj-service">
           <h3>SOUND SYSTEM</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -243,7 +258,7 @@
 
 
         <!-- card 5 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="1s" data-service="dance">
+        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.5s" data-service="dance">
           <img src="./resources/services-icons/dancing.png" alt="dj-service">
           <h3>DANCE PERFORMANCES</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -260,7 +275,7 @@
         </article>
 
         <!-- card 6 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="1.2s" data-service="photography">
+        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.6s" data-service="photography">
           <img src="./resources/services-icons/photography.png" alt="dj-service">
           <h3>PHOTOGRAPHY</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -291,7 +306,7 @@
           </div>
         </article> -->
         <!-- card 7 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.4s" data-service="brass">
+        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.7s" data-service="brass">
           <img src="./resources/services-icons/brass-band.png" alt="dj-service">
           <h3>BRASS BAND</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
