@@ -325,6 +325,10 @@ height: 50px;
   transition: transform 0.4s ease-in-out;
   z-index: 99999999;
 
+  background-image: url("./resources/contact-bg.webp");
+  background-size: cover;
+  background-position: -50%;
+
 
 }
 
@@ -334,18 +338,7 @@ height: 50px;
   }
 }
 
-#slide-menu::before {
-  content: "";
-  position: absolute;
-  inset: 0;
 
-  background-image: url("./resources/contact-bg.webp");
-  background-size: cover;
-  background-position: top;
-  opacity: 0.5;
-  filter: contrast(1) brightness(0.5); /* You can customize this */
-  z-index: 0;
-}
 #slide-menu.open {
   transform: translateX(0);
 }
@@ -395,7 +388,7 @@ background-color: var(--color-surface);
 
 .nav-links a {
   color: var(--color-text);
-  margin-left: 2rem;
+
   text-decoration: none;
   font-weight: 500;
   position: relative;
