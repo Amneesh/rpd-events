@@ -1,48 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RPD</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./flex.css" />
 
-    <script src="./script.js" defer></script>
-    <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+
+  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<body>
 
-    <header class="site-header">
-        <!-- <div class="logo"><img src="./resources/rpd-logo.png" alt="rpd logo"></div> -->
-        <nav class="nav-links">
-          <a href="./index.html">Home</a>
-          <a href="./events.html">Events</a>
-          <a href="./gallery.html">Gallery</a>
-          <a href="./contact.html">Contact</a>
-        </nav>
-    </header>
+<body class="home-page">
 
-<main>
+  <header class="rpd-header">
+    <button id="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="slide-menu" class="nav-links">
+      <ul>
+        <li> <a href="./index.html">Home</a></li>
+        <li><a href="./events.html">Events</a></li>
+        <li> <a href="./gallery.html">Gallery</a></li>
+        <li> <a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- <canvas id="banner" width="1920" height="800"></canvas> -->
+
     <section class="hero">
-        <div class="overlay">
-          <div class="hero-content">
-            <img src="./resources/rpd-logo.png" alt="">
-            <p>Where every moment becomes a celebration. We create unforgettable event experiences with light, sound, and soul.</p>
-            <!-- <a href="#contact" class="rpd-button">Book Now</a> -->
-            <button class="glowbutton">Book Now</button>
+      <div class="hero-video">
+        <video autoplay muted playsinline>
+          <source src="./resources/videos/bg-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="overlay flex flex-col  justify-center items-center gap-8">
+        <div class="hero-content">
+          <img src="./resources/rpd-logo.png" alt="" />
+
+          <blockquote class="inspiring-quote">
+            <p> We put in the hours you don’t see, so you can enjoy the moments you never forget.</p>
+            <cite>RPD EVENTS</cite>
+          </blockquote>
+
+          <div class="hero-buttons flex flex-row flex-wrap gap-1 justify-center items-center">
+            <button class="rpd-button-secondary">GET A QUOTE</button>
 
           </div>
         </div>
-      </section>
+      </div>
+
+      <div class="hero-container flex flex-col md:flex-row justify-center gap-1">
+        <a href="#whoWeAre">
+          <svg class="arrows">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+          </svg>
+        </a>
 
 
-      <section class="who-we-are">
-        <div class="container">
-          <div class="who-we-are-content">
+      </div>
+
+    </section>
+
+    <!-- <section class="maintainence">
+        <div class="maintainence-container">
+           <div class="maintainence-text">
+            <h2>
+              The stage is set, the beats are ready.  </h2>
+              </div>
+          <div class="maintainence-content">
             <div class="image-side">
                 <div class="who-we-are-image-container">
                     <div class="item" style="--i:0;"></div>
@@ -68,58 +108,266 @@
                     <div class="item" style="--i:20;"></div>
                   </div>
             </div>
-            <div class="text-side">
-              <h2>Who We Are</h2>
-              <p>
-                At RPD Events, we specialize in creating unforgettable experiences through expert lighting décor, live DJ performances, and vibrant cultural shows like Gidha and Bhangra. Our dedicated team brings passion, energy, and professionalism to every event, ensuring your celebrations shine bright with neon colors and memorable moments.
-              </p>
-              <p>
-                With years of experience in the event industry, we are committed to delivering exceptional service, innovative solutions, and a personal touch that makes every event uniquely yours.
-              </p>
+
+          </div>
+          <div class="maintainence-text">
+
+<h3>Our website is dropping very soon — don’t miss the vibe.</h3>
+
+<h4>Stay tuned. The party's about to start.</h4>
+
+
+
+          </div>
+        </div>
+      </section> -->
+
+    <section class="who-we-are flex justify-center items-center" id="whoWeAre">
+      <div class="container">
+        <div class="who-we-are-content">
+          <div class="image-side">
+            <div class="who-we-are-image-container">
+              <div class="item" style="--i: 0"></div>
+              <div class="item" style="--i: 1"></div>
+              <div class="item" style="--i: 2"></div>
+              <div class="item" style="--i: 3"></div>
+              <div class="item" style="--i: 4"></div>
+              <div class="item" style="--i: 5"></div>
+              <div class="item" style="--i: 6"></div>
+              <div class="item" style="--i: 7"></div>
+              <div class="item" style="--i: 8"></div>
+              <div class="item" style="--i: 9"></div>
+              <div class="item" style="--i: 10"></div>
+              <div class="item" style="--i: 11"></div>
+              <div class="item" style="--i: 12"></div>
+              <div class="item" style="--i: 13"></div>
+              <div class="item" style="--i: 14"></div>
+              <div class="item" style="--i: 15"></div>
+              <div class="item" style="--i: 16"></div>
+              <div class="item" style="--i: 17"></div>
+              <div class="item" style="--i: 18"></div>
+              <div class="item" style="--i: 19"></div>
+              <div class="item" style="--i: 20"></div>
+            </div>
+          </div>
+          <div class="text-side">
+            <h1><span class="color-accent">Who</span> We Are</h1>
+
+            <p>
+              At RPD Events, we specialize in creating unforgettable
+              experiences through expert lighting décor, live DJ performances,
+              and vibrant cultural shows like Gidha and Bhangra. Our dedicated
+              team brings passion, energy, and professionalism to every event,
+              ensuring your celebrations shine bright with neon colors and
+              memorable moments.
+            </p>
+            <p>
+              With years of experience in the event industry, we are committed
+              to delivering exceptional service, innovative solutions, and a
+              personal touch that makes every event uniquely yours.
+            </p>
+            <div
+              class="counters flex flex-col flex-wrap sm:flex-row sm:justify-evenly items-start row-gap-1 sm:column-gap-2"
+              id="counterSection">
+              <div class="counter-container flex flex-row sm:flex-col items-center justify-center">
+                <!-- <div class="counter-image">
+              <img src="./resources/icons/clients.png" alt="" />
+            </div> -->
+                <span id="count1" class="counter-number"></span>
+                <h5 class="counter-title">Clients</h5>
+              </div>
+
+              <div class="counter-container flex flex-row sm:flex-col  items-center justify-center">
+                <!-- <div class="counter-image">
+              <img src="./resources/icons/events.png" alt="" />
+            </div> -->
+
+                <span id="count2" class="counter-number"></span>
+                <h5 class="counter-title">Events</h5>
+              </div>
+
+              <div class="counter-container flex flex-row sm:flex-col  items-center justify-center">
+                <!-- <div class="counter-image">
+              <img src="./resources/icons/satisfaction.png" alt="" />
+            </div> -->
+
+                <span id="count3" class="counter-number"></span>
+                <h5 class="counter-title">Shows</h5>
+              </div>
+
             </div>
           </div>
         </div>
-      </section>
-      
-      <section class="full-video">
-        <video autoplay muted loop playsinline class="background-video">
-          <source src="./resources/dj-disco.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </section>
+      </div>
+    </section>
 
-      <section class="services-section">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-      
-          <div class="service-card">
-            <h3>Home Lighting Décor</h3>
-            <p>Transform your venue with elegant indoor and outdoor lighting setups tailored for every celebration.</p>
+    <section class="join-us shake-effect">
+      <div class="join-us-container flex flex-col items-center justify-center gap-1">
+        <h1>Still booking boring <span class="color-accent">Events ?</span> That’s a bold choice</h1>
+        <button class="rpd-button-secondary">GET A QUOTE</button>
+      </div>
+    </section>
+
+
+    <section class="services-section" id="section">
+      <h1>OUR <span class="color-accent">SERVICES</span></h1>
+      <div class="underline"></div>
+      <div class="services-container flex flex-wrap flex-row justify-evenly items-center gap-4">
+        <!-- card 1 -->
+        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="dj">
+          <img src="./resources/services-icons/dj.png" alt="dj-service">
+          <h3>DJ</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
+          <button class="service-btn">
+            See more
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px"
+              class="icon">
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"
+                stroke="#ffffff"
+                d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008">
+              </path>
+            </svg>
+          </button>
+        </article>
+
+        <!-- card 2 -->
+        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="led">
+          <img src="./resources/services-icons/led-screen.png" alt="dj-service">
+          <h3>LED SCREEN</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
+          <button class="service-btn">
+            See more
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px"
+              class="icon">
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"
+                stroke="#ffffff"
+                d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008">
+              </path>
+            </svg>
+          </button>
+        </article>
+
+        <!-- card 3 -->
+        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="lighting">
+          <img src="./resources/services-icons/lighting.png" alt="dj-service">
+          <h3>LIGHTING</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
+          <button class="service-btn">
+            See more
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px"
+              class="icon">
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"
+                stroke="#ffffff"
+                d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008">
+              </path>
+            </svg>
+          </button>
+        </article>
+
+        <!-- card 4 -->
+        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="sound">
+          <img src="./resources/services-icons/sound-system.png" alt="dj-service">
+          <h3>SOUND SYSTEM</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
+          <button class="service-btn">
+            See more
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px"
+              class="icon">
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"
+                stroke="#ffffff"
+                d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008">
+              </path>
+            </svg>
+          </button>
+        </article>
+
+
+        <!-- card 5 -->
+        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="dance">
+          <img src="./resources/services-icons/dancing.png" alt="dj-service">
+          <h3>DANCE PERFORMANCES</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
+          <button class="service-btn">
+            See more
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px"
+              class="icon">
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"
+                stroke="#ffffff"
+                d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008">
+              </path>
+            </svg>
+          </button>
+        </article>
+
+        <!-- card 6 -->
+        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="photography">
+          <img src="./resources/services-icons/photography.png" alt="dj-service">
+          <h3>PHOTOGRAPHY</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
+          <button class="service-btn">
+            See more
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px"
+              class="icon">
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"
+                stroke="#ffffff"
+                d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008">
+              </path>
+            </svg>
+          </button>
+        </article>
+        <!-- <article class="services-card">
+
+          <div class="services-card-img">
+            <div class="card-imgs pv delete"></div>
           </div>
-      
-          <div class="service-card">
-            <h3>Live DJ & Events</h3>
-            <p>Book high-energy DJ sets with synchronized lighting and custom DJ screen displays.</p>
+
+          <div class="project-info">
+            <div class="flex">
+              <div class="project-title">Title card</div>
+              <span class="tag">type</span>
+            </div>
+            <span class="lighter">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Repudiandae voluptas ullam aut incidunt minima.</span>
           </div>
-      
-          <div class="service-card">
-            <h3>Live Sound Systems</h3>
-            <p>Crystal clear audio with premium sound equipment, mixers, and wireless mics.</p>
+        </article> -->
+        <!-- card 7 -->
+        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="brass">
+          <img src="./resources/services-icons/brass-band.png" alt="dj-service">
+          <h3>BRASS BAND</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
+          <button class="service-btn">
+            See more
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15px" width="15px"
+              class="icon">
+              <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"
+                stroke="#ffffff"
+                d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008">
+              </path>
+            </svg>
+          </button>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="testimonial-section flex flex-col  justify-center ">
+      <h1>What our <span class="color-accent">Clients</span> say!</h1>
+      <div class="underline"></div>
+      <div class="testimonial-box">
+
+        <div class="carousel-container flex items-center">
+          <div class="carousel-track" id="track">
+
           </div>
-      
-          <div class="service-card">
-            <h3>Gidha / Bhangra Performances</h3>
-            <p>Live cultural dance performances to energize your event — book male/female troupes.</p>
-          </div>
-      
         </div>
-      </section>
-      
-      
-</main>
+      </div>
+    </section>
 
 
-<div class="floating-social">
+
+  </main>
+
+  <div class="floating-social">
     <button id="toggleSocial" aria-label="Toggle Social Links">
       <i class="fas fa-share-alt"></i>
     </button>
@@ -138,10 +386,97 @@
       </a>
     </nav>
   </div>
-      
 
+  <footer class="footer-section">
+    <section class="subscription-box">
+      <div class="sub-box flex flex-row column-gap-2 items-center">
+        <div class="sub-box-title">
+          <h4>Subscribe to our events</h4>
+        </div>
+        <div class="sub-box-content">
+          <div class="sub-input-container">
+            <input type="email" class="subscribe-input" placeholder="Enter your email" />
+            <button class="subscribe-button">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer-info">
+      <h4 class="visually-hidden">Logo and description</h4>
+      <a class="footer-logo" href="#top">
+        <img src="./resources/rpd-logo.png" alt="fan bhangre de logo" />
+      </a>
+      <div class="footer-description">
+        <p>RPD</p>
+      </div>
+    </section>
 
-      
-    
+    <section class="footer-quick-links footer-column">
+      <h4>Quick Links</h4>
+      <div class="quick-links">
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#reviews">Client Reviews</a></li>
+          <li><a href="#instructor">Instructor</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer-contact-us footer-column">
+      <h4>Contact us</h4>
+      <div class="footer-contact">
+        <ul>
+          <li>
+            <a href="tel:+12369715969" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-phone"></i>
+              <p>+1 (236) 971-5969</p>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+17786287121" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-phone"></i>
+              <p>+1 (778) 628-7121</p>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@fanbhangradance.com" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-envelope"></i>
+              <p>fanbhangrede@gmail.com</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/sQJMdmcLzcGtsXuEA" target="_blank"
+              class="info-item-web-content flex flex-row col-gap-1 column-gap-1">
+              <i class="fa fa-location-dot"></i>
+              <p>8065 D 130 St Surrey, BC V3W 4G1</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer-social-media footer-column">
+      <h4>Social media</h4>
+      <div class="footer-social-media-icons">
+        <a href="https://wa.me/12369715969?text=Hi!%20I'm%20interested%20in%20your%20services.%20Please%20tell%20me%20more."
+          target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/fanbhangreda/" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/fanbhangrede/?hl=en" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UC3q0f7nz5L0Znzi573fLhpg" target="_blank">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+    </section>
+  </footer>
 </body>
+
 </html>

@@ -1,66 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./contact.css">
 
-    <script src="./script.js" defer></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RPD EVENTS</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./contact.css" />
+  <link rel="stylesheet" href="./flex.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="./script.js" defer></script>
 </head>
-<body>
-    <header class="site-header">
-        <!-- <div class="logo"><img src="./resources/rpd-logo.png" alt="rpd logo"></div> -->
-        <nav class="nav-links">
-            <a href="./index.html">Home</a>
-            <a href="./events.html">Events</a>
-            <a href="./gallery.html">Gallery</a>
-            <a href="./contact.html">Contact</a>
-        </nav>
-    </header>
-<main>
-    <section class="contact-section">
-        <div class="container">
-          <div class="image-side">
-            <img src="./resources/dj-contact.jpg" alt="Contact Us" />
+
+<body class="contact-page">
+
+  <header>
+    <button id="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="slide-menu" class="nav-links">
+      <ul>
+        <li> <a href="./index.html">Home</a></li>
+        <li><a href="./events.html">Events</a></li>
+        <li> <a href="./gallery.html">Gallery</a></li>
+        <li> <a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header-wrapper contact-map contact-page flex justify-center items-center">
+
+      <h1 class="visually-hidden">RPD map</h1>
+      <iframe class="g-map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2609.699754141574!2d-122.8625132!3d49.149324799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d932d75a11f1%3A0x91d8c66b416e6b8b!2sSurrey%20Bhangra%20-%20Fan%20Bhangre%20De%20By%20Bhupinder%20Singh!5e0!3m2!1sen!2sca!4v1748404067097!5m2!1sen!2sca"
+        style="border: 0;filter: invert(100%) hue-rotate(80deg);" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section
+      class="contact-section flex flex flex-col md:flex-row sm:justify-around items-start row-gap-1 sm:column-gap-2 items-center">
+      <div class="contact-info flex flex-col row-gap-2">
+        <h1><span class="color-accent">Let’s Make</span> Your Event Unforgettable</h1>
+        <h5>
+          We help make your events fun, stress-free, and memorable. Just tell us what you need — we’ll handle the rest!
+        </h5>
+
+
+        <div class="contact-info-wrapper flex flex-row flex-wrap justify-between items-start gap-2">
+
+
+          <div class="contact-info-subwrapper flex flex-row items-start column-gap-1">
+            <!-- <img src="" alt="" /> -->
+            <i class="fa-solid fa-phone"></i>
+            <div class="contact-info-container flex flex-col gap-50">
+              <h5>LET'S TALK</h5>
+               <a href="tel:+17788610450" class="flex flex-col">+1 (778) 861-0450 <span class="color-primary"> - Kulvir singh</span></a>
+               <a href="tel:+17787980305" class="flex flex-col">+1 (778) 798-0305 <span class="color-primary"> - Parminder Singh</span></a>
+
+            </div>
           </div>
-          <div class="form-side">
-            <h2>Contact Us</h2>
-            <form id="contactForm" action="#" method="POST">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your full name" required />
-      
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
-      
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
-      
-              <button type="submit" class="rpd-button">Send Message</button>
-            </form>
+
+          <a href="linkto:+12345667" class="contact-info-subwrapper flex flex-row items-start column-gap-1">
+            <!-- <img src="" alt="" /> -->
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="contact-info-container flex flex-col gap-50">
+              <h5>HEAD OFFICE</h5>
+              <p>8065D 133 street, Surrey, BC </p>
+            </div>
+          </a>
+
+          <a href="mailto:+12345667" class="contact-info-subwrapper flex flex-row items-start column-gap-1">
+            <!-- <img src="" alt="" /> -->
+            <i class="fa-solid fa-envelope"></i>
+            <div class="contact-info-container flex flex-col gap-50">
+              <h5>EMAIL US</h5>
+              <p>xyz@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="linkto:+12345667" class="contact-info-subwrapper flex flex-row items-start column-gap-1">
+            <!-- <img src="" alt="" /> -->
+            <i class="fa-solid fa-clock"></i>
+            <div class="contact-info-container flex flex-col gap-50" >
+              <h5>WORKING HOURS</h5>
+              <p>Monday - Friday</p>
+              <p>07-09</p>
+            </div>
+          </a>
+
+
+
+        </div>
+        <div class="underline-left"></div>
+
+        <div class="social-icons flex flex-col gap-1">
+
+<h4>FOLLOW US ON SOCIAL MEDIA</h4>
+          <div class="footer-social-media-icons">
+            <a href="https://wa.me/12369715969?text=Hi!%20I'm%20interested%20in%20your%20services.%20Please%20tell%20me%20more."
+              target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/fanbhangreda/" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/fanbhangrede/?hl=en" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UC3q0f7nz5L0Znzi573fLhpg" target="_blank">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
           </div>
         </div>
-      </section>
-      
-      
-</main>
+      </div>
 
-<footer class="footer">
-    <nav class="vertical-footer">
-        <a href="tel:+1234567890" aria-label="Phone" class="icon cyan">
-          <i class="fas fa-phone"></i>
+      <div class="contact-form shake-effect flex flex-col gap-2">
+        <div class="contact-header flex flex-col gap-25">
+          <h2>Get in touch </h2>
+          <div class="underline-left"></div>
+        </div>
+        <form id="contactForm" action="#" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+
+          <button type="submit" class="rpd-button-secondary">Send Message</button>
+        </form>
+      </div>
+    </section>
+    <section class="faq-section">
+      <h1 class="visually-hidden">Frequently Asked Questions</h1>
+
+      <div class="faq-container">
+        <h1><span class="color-accent">Questions ? </span> We’ve Got Answers!</h1>
+
+        <div class="faq-card">
+          <button class="faq-toggle">How early should I book?<span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>We recommend booking at least 1 to 2 months in advance to ensure availability, especially during peak
+              event seasons. However, we do accommodate last-minute bookings based on availability.</p>
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <button class="faq-toggle">Do you provide on-site support?<span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>Yes, our team is present on-site throughout your event to handle setup, technical support, and any
+              last-minute adjustments to ensure everything runs smoothly.</p>
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <button class="faq-toggle">Can I customize a package?<span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>Absolutely! All our packages are fully customizable. You can mix and match services, choose your
+              preferred equipment, and personalize the experience to match your event’s theme and budget.</p>
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <button class="faq-toggle">What areas do you serve?<span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>We primarily serve the Greater Vancouver Area and surrounding regions. For events outside this area, feel
+              free to contact us—we may still be able to accommodate.</p>
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <button class="faq-toggle">Is a deposit required?<span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>Yes, a deposit is required to confirm your booking. The remaining balance can be paid closer to the event
+              date. Specific payment terms will be shared during the booking process.</p>
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <button class="faq-toggle">What if I need to cancel or reschedule?<span class="icon">+</span></button>
+          <div class="faq-content">
+            <p>You can cancel or reschedule up to 7 days before the event for a partial refund. For last-minute changes,
+              please reach out to our team and we'll do our best to assist you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <div class="floating-social">
+    <button id="toggleSocial" aria-label="Toggle Social Links">
+      <i class="fas fa-share-alt"></i>
+    </button>
+    <nav id="socialPopup" class="social-popup hidden" aria-label="Social Links">
+      <a href="tel:+1234567890" aria-label="Phone" class="icon cyan">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="mailto:info@rpdevents.com" aria-label="Email" class="icon magenta">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="#" aria-label="Facebook" class="icon cyan">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" aria-label="Instagram" class="icon magenta">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </nav>
+  </div>
+
+  <footer class="footer-section">
+
+    <section class="subscription-box">
+      <div class="sub-box flex flex-row column-gap-2 items-center">
+        <div class="sub-box-title">
+          <h4>Subscribe to our events</h4>
+        </div>
+        <div class="sub-box-content">
+
+          <div class="sub-input-container">
+            <input type="email" class="subscribe-input" placeholder="Enter your email" />
+            <button class="subscribe-button"><i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <section class="footer-info">
+      <h4 class="visually-hidden">Logo and description</h4>
+      <a class="footer-logo" href="#top">
+        <img src="./resources/rpd-logo.png" alt="fan bhangre de logo" />
+      </a>
+      <div class="footer-description">
+        <p>RPD </p>
+      </div>
+    </section>
+
+    <section class="footer-quick-links footer-column">
+      <h4>Quick Links</h4>
+      <div class="quick-links">
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#reviews">Client Reviews</a></li>
+          <li><a href="#instructor">Instructor</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer-contact-us footer-column">
+      <h4>Contact us</h4>
+      <div class="footer-contact">
+        <ul>
+          <li>
+            <a href="tel:+12369715969" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-phone"></i>
+              <p>+1 (236) 971-5969</p>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+17786287121" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-phone"></i>
+              <p>+1 (778) 628-7121</p>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@fanbhangradance.com" class="info-item-web-content flex flex-row column-gap-1">
+              <i class="fa fa-envelope"></i>
+              <p>fanbhangrede@gmail.com</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/sQJMdmcLzcGtsXuEA" target="_blank"
+              class="info-item-web-content flex flex-row col-gap-1 column-gap-1">
+              <i class="fa fa-location-dot"></i>
+              <p>8065 D 130 St Surrey, BC V3W 4G1</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer-social-media footer-column">
+      <h4>Social media</h4>
+      <div class="footer-social-media-icons">
+        <a href="https://wa.me/12369715969?text=Hi!%20I'm%20interested%20in%20your%20services.%20Please%20tell%20me%20more."
+          target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
         </a>
-        <a href="mailto:info@rpdevents.com" aria-label="Email" class="icon magenta">
-          <i class="fas fa-envelope"></i>
+        <a href="https://www.facebook.com/fanbhangreda/" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
         </a>
-        <a href="#" aria-label="Facebook" class="icon cyan">
-          <i class="fab fa-facebook-f"></i>
+        <a href="https://www.instagram.com/fanbhangrede/?hl=en" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
         </a>
-        <a href="#" aria-label="Instagram" class="icon magenta">
-          <i class="fab fa-instagram"></i>
+        <a href="https://www.youtube.com/channel/UC3q0f7nz5L0Znzi573fLhpg" target="_blank">
+          <i class="fa-brands fa-youtube"></i>
         </a>
-      </nav>
+      </div>
+    </section>
   </footer>
+
 </body>
+
 </html>
