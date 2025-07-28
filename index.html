@@ -13,6 +13,8 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
 
   <script src="./script.js" defer></script>
+  <script src="./animations.js" defer></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
@@ -39,6 +41,7 @@
     <!-- <canvas id="banner" width="1920" height="800"></canvas> -->
 
     <section class="hero">
+      <h1 class="visually-hidden">RPD EVENTS</h1>
       <div class="hero-video">
         <video autoplay muted playsinline>
           <source src="./resources/videos/bg-video.mp4" type="video/mp4" />
@@ -48,7 +51,7 @@
 
       <div class="overlay flex flex-col  justify-center items-center gap-8">
         <div class="hero-content">
-          <img src="./resources/rpd-logo.png" alt="" />
+          <img class="animate-flip-x" src="./resources/rpd-logo.png" alt="" />
 
           <blockquote class="inspiring-quote">
             <p> We put in the hours you don’t see, so you can enjoy the moments you never forget.</p>
@@ -76,55 +79,12 @@
 
     </section>
 
-    <!-- <section class="maintainence">
-        <div class="maintainence-container">
-           <div class="maintainence-text">
-            <h2>
-              The stage is set, the beats are ready.  </h2>
-              </div>
-          <div class="maintainence-content">
-            <div class="image-side">
-                <div class="who-we-are-image-container">
-                    <div class="item" style="--i:0;"></div>
-                    <div class="item" style="--i:1;"></div>
-                    <div class="item" style="--i:2;"></div>
-                    <div class="item" style="--i:3;"></div>
-                    <div class="item" style="--i:4;"></div>
-                    <div class="item" style="--i:5;"></div>
-                    <div class="item" style="--i:6;"></div>
-                    <div class="item" style="--i:7;"></div>
-                    <div class="item" style="--i:8;"></div>
-                    <div class="item" style="--i:9;"></div>
-                    <div class="item" style="--i:10;"></div>
-                    <div class="item" style="--i:11;"></div>
-                    <div class="item" style="--i:12;"></div>
-                    <div class="item" style="--i:13;"></div>
-                    <div class="item" style="--i:14;"></div>
-                    <div class="item" style="--i:15;"></div>
-                    <div class="item" style="--i:16;"></div>
-                    <div class="item" style="--i:17;"></div>
-                    <div class="item" style="--i:18;"></div>
-                    <div class="item" style="--i:19;"></div>
-                    <div class="item" style="--i:20;"></div>
-                  </div>
-            </div>
-
-          </div>
-          <div class="maintainence-text">
-
-<h3>Our website is dropping very soon — don’t miss the vibe.</h3>
-
-<h4>Stay tuned. The party's about to start.</h4>
-
-
-
-          </div>
-        </div>
-      </section> -->
+  
+        
 
     <section class="who-we-are flex justify-center items-center" id="whoWeAre">
       <div class="container">
-        <div class="who-we-are-content">
+        <div class="who-we-are-content ">
           <div class="image-side">
             <div class="who-we-are-image-container">
               <div class="item" style="--i: 0"></div>
@@ -150,8 +110,8 @@
               <div class="item" style="--i: 20"></div>
             </div>
           </div>
-          <div class="text-side">
-            <h1><span class="color-accent">Who</span> We Are</h1>
+          <div class="text-side " >
+            <h1 class="animate-slide-right" data-delay="0.3s"><span class="color-accent">Who</span> We Are</h1>
 
             <p>
               At RPD Events, we specialize in creating unforgettable
@@ -210,11 +170,11 @@
 
 
     <section class="services-section" id="section">
-      <h1>OUR <span class="color-accent">SERVICES</span></h1>
+      <h1 class="animate-slide-right" data-delay="0.3s">OUR <span class="color-accent">SERVICES</span></h1>
       <div class="underline"></div>
       <div class="services-container flex flex-wrap flex-row justify-evenly items-center gap-4">
         <!-- card 1 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="dj">
+        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.2s" data-service="dj">
           <img src="./resources/services-icons/dj.png" alt="dj-service">
           <h3>DJ</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -231,7 +191,7 @@
         </article>
 
         <!-- card 2 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="led">
+        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.4s" data-service="led">
           <img src="./resources/services-icons/led-screen.png" alt="dj-service">
           <h3>LED SCREEN</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -248,7 +208,7 @@
         </article>
 
         <!-- card 3 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="lighting">
+        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.6s" data-service="lighting">
           <img src="./resources/services-icons/lighting.png" alt="dj-service">
           <h3>LIGHTING</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -265,7 +225,7 @@
         </article>
 
         <!-- card 4 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="sound">
+        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.8s" data-service="sound">
           <img src="./resources/services-icons/sound-system.png" alt="dj-service">
           <h3>SOUND SYSTEM</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -283,7 +243,7 @@
 
 
         <!-- card 5 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="dance">
+        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="1s" data-service="dance">
           <img src="./resources/services-icons/dancing.png" alt="dj-service">
           <h3>DANCE PERFORMANCES</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -300,7 +260,7 @@
         </article>
 
         <!-- card 6 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="photography">
+        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="1.2s" data-service="photography">
           <img src="./resources/services-icons/photography.png" alt="dj-service">
           <h3>PHOTOGRAPHY</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -331,7 +291,7 @@
           </div>
         </article> -->
         <!-- card 7 -->
-        <article class="service-card flex flex-col justify-center items-center gap-1" data-service="brass">
+        <article class="service-card flex flex-col justify-center items-center gap-1 animate-blur-in" data-delay="0.4s" data-service="brass">
           <img src="./resources/services-icons/brass-band.png" alt="dj-service">
           <h3>BRASS BAND</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni fugiat molestias iure.</p>
@@ -351,7 +311,7 @@
 
 
     <section class="testimonial-section flex flex-col  justify-center ">
-      <h1>What our <span class="color-accent">Clients</span> say!</h1>
+      <h1 class="animate-slide-right" data-delay="0.3s">What our <span class="color-accent">Clients</span> say!</h1>
       <div class="underline"></div>
       <div class="testimonial-box">
 

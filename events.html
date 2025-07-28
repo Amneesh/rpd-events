@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="./flex.css" />
   <link rel="stylesheet" href="./events.css" />
+  <script src="./animations.js" defer></script>
 
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -42,7 +43,7 @@
   </header>
 
   <main>
-    <section class="page-header-wrapper events-page flex justify-center items-center">
+    <section class="page-header-wrapper events-page flex justify-center items-center animate-slide-down " data-delay="0.2s">
       <h1 class="visually-hidden">EVENTS</h1>
     </section>
 
@@ -51,7 +52,7 @@
       <div class="event-tiles">
         <h2 class="sr-only">Event Categories</h2>
 
-        <article class="event-tile">
+        <article class="event-tile ">
           <h2 class="visually-hidden">Weddings</h2>
           <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=400&q=80"
             alt="Wedding celebration with flowers and lights">
@@ -139,7 +140,7 @@
     <section class="why-us flex flex-col items-center justify-center">
       <h1 class="visually-hidden">WHY CHOOSE US</h1>
       <div class="why-us-container flex flex-col lg:flex-row items-center justify-around gap-6">
-        <div class="why-us-image">
+        <div class="why-us-image animate-rotate-in">
           <p class="browser-warning">
             If this looks wonky to you it's because this browser doesn't support the CSS
             property 'aspect-ratio'.

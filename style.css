@@ -264,26 +264,7 @@ height: 50px;
   transform: perspective(1.5em) rotateX(35deg) scale(1, 0.7);
 }
 
-/* maintainence
 
-  .maintainence{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   min-height: 100vh;
-  }
-  .maintainence-text{
-    display: flex;
-    flex-flow: column;
-    gap:3rem;
-    justify-content: center;
-    align-items:center;
-    padding: 2rem;
-
-color:var(--color-accent-light);
-text-align: center;
-  }
-maintainence */
 
 /* headxder */
 
