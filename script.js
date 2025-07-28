@@ -13,6 +13,26 @@ toggleBtn.addEventListener('click', () => {
   socialPopup.classList.toggle('hidden');
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const joinUs = document.querySelector('.shake-effect');
+  let hasShaken = false; // to prevent repeated shaking
+
+  window.addEventListener('scroll', function () {
+    const rect = joinUs.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+    if (isVisible && !hasShaken) {
+      joinUs.classList.add('shake');
+      hasShaken = true;
+
+      // Optional: remove class after animation ends if you want it reusable
+      setTimeout(() => {
+        joinUs.classList.remove('shake');
+      }, 500);
+    }
+  });
+});
+
 
  if (document.body.classList.contains("gallery-page")) {
 
@@ -66,22 +86,7 @@ imageData.forEach(({ src, link }) => {
  if (document.body.classList.contains("event-page")) {
 
 
-  const faqToggles = document.querySelectorAll(".faq-toggle");
-
-  faqToggles.forEach(toggle => {
-    toggle.addEventListener("click", () => {
-      const parent = toggle.closest(".faq-card");
-      parent.classList.toggle("active");
-
-      // Close others (optional)
-      faqToggles.forEach(other => {
-        if (other !== toggle) {
-          other.closest(".faq-card").classList.remove("active");
-        }
-      });
-    });
-  });
-
+  
 
  const servicesData = [
     {
@@ -189,17 +194,100 @@ window.addEventListener("load", () => {
 
   }
 
+  if (document.body.classList.contains("contact-page")) {
+
+  const faqToggles = document.querySelectorAll(".faq-toggle");
+
+  faqToggles.forEach(toggle => {
+    toggle.addEventListener("click", () => {
+      const parent = toggle.closest(".faq-card");
+      parent.classList.toggle("active");
+
+      // Close others (optional)
+      faqToggles.forEach(other => {
+        if (other !== toggle) {
+          other.closest(".faq-card").classList.remove("active");
+        }
+      });
+    });
+  });
+
+}
+
 
 
 
 if (document.body.classList.contains("home-page")) {
 
-  document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    document.querySelector(".dj-image-container").classList.add("show");
-  }, 2000); 
-});
+//   document.addEventListener("DOMContentLoaded", () => {
+//   setTimeout(() => {
+//     document.querySelector(".left-animate").classList.add("show");
+//   }, 2000); 
+// });
 
+const testimonialsData = [
+  {
+    "name": "Himani Thakur",
+    "role": "Local Guide · 34 reviews · 14 photos",
+    "time": "3 years ago",
+    "text": "I have learnt bhangra from here and they not only teach bhangra but also polish the skills out of a person. It's pretty disciplined place where everybody focus on their hard work and sincerity to learn bhangra.",
+    "likes": "🙏1"
+  },
+  {
+    "name": "Gurjit Virk",
+    "role": "1 review",
+    "time": "2 years ago",
+    "text": "RPD bhangra academy is one of the best academy, my kids are doing great in bhangra only because of the best coaching skills they get taught by the fantastic coach",
+    "likes": "❤️1"
+  },
+  {
+    "name": "Ekjot Sarang",
+    "role": "2 reviews",
+    "time": "3 years ago",
+    "text": "Not good I used to go there and the owner is really unprofessional, unorganized, occasionally hits older students \"as a joke\" and doesn't account for students mental health",
+    "likes": "🙏1"
+  },
+  {
+    "name": "Sukh Toor Dhaliwal",
+    "role": "2 reviews",
+    "time": "6 years ago",
+    "text": "Hi the teacher here at this academy has so much discipline in him and does so much hard work",
+    "likes": "🙏❤️4"
+  },
+  {
+    "name": "Mehtab Brahm",
+    "role": "5 reviews",
+    "time": "6 years ago",
+    "text": "Learn from the best! Great coach!",
+    "likes": "🙏2"
+  },
+  {
+    "name": "Tanvir Johal",
+    "role": "7 reviews",
+    "time": "6 years ago",
+    "text": "AMAZING BHANGRA ACADEMY! LEARN THE BEST FROM THE BEST!",
+    "likes": "🙏1"
+  },
+  {
+    "name": "Esha Bedi",
+    "role": "4 reviews",
+    "time": "5 years ago",
+    "text": "This place is amazing on how they teach step by step",
+    "likes": "🙏1"
+  },
+  {
+    "name": "Amneesh Singh",
+    "role": "5 reviews",
+    "time": "1 year ago",
+    "text": "RPD Events truly transformed our wedding! Their professionalism and energy were unmatched.",
+    "likes": "🌟5"
+  }
+]
+
+const colors = [
+  '#6c5ce7', '#00b894', '#d63031', '#0984e3', '#fd79a8',
+  '#e17055', '#00cec9', '#2d3436'
+];
 
 document.addEventListener("DOMContentLoaded", () => {
   function counter(id, start, end, duration) {
@@ -235,7 +323,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
- const track = document.getElementById('track');
+
+// Create testimonial divs dynamically
+const track = document.getElementById('track');
+  track.innerHTML = ''; // Clear if needed
+
+  testimonialsData.forEach(test => {
+    const firstLetter = test.name.charAt(0).toUpperCase();
+    const colorIndex = firstLetter.charCodeAt(0) % colors.length;
+    const bgColor = colors[colorIndex];
+
+    const testimonialDiv = document.createElement('div');
+    testimonialDiv.className = 'testimonial';
+
+    const avatarDiv = document.createElement('div');
+    avatarDiv.className = 'avatar';
+    avatarDiv.textContent = firstLetter;
+    avatarDiv.style.backgroundColor = bgColor;
+
+    const nameH4 = document.createElement('h4');
+    nameH4.textContent = test.name;
+
+    const para = document.createElement('p');
+    para.textContent = test.text;
+
+    const footer = document.createElement('small');
+    footer.textContent = `${test.time} · ${test.role}`;
+
+    testimonialDiv.appendChild(avatarDiv);
+    testimonialDiv.appendChild(nameH4);
+    testimonialDiv.appendChild(para);
+    testimonialDiv.appendChild(footer);
+
+    track.appendChild(testimonialDiv);
+  });
+
 if (track) {
   const cards = track.querySelectorAll('.testimonial');
   let scrollX = 0;

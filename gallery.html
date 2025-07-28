@@ -10,28 +10,14 @@
   <link rel="stylesheet" href="./flex.css" />
 
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+
+
 
   <script src="./script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body class="gallery-page">
-  <!-- <header class="rpd-header">
-    <div class="site-header">
-  
-      <nav class="nav-links">
-        <a href="./index.html">Home</a>
-        <a href="./events.html">Events</a>
-        <a href="./gallery.html">Gallery</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-      <div class="join-button">
-        <button class="rpd-button">JOIN US</button>
-      </div>
-    </div>
-  </header> -->
 
 
   <header>
@@ -53,8 +39,9 @@
 
   <main>
     <section class="page-header-wrapper gallery-page flex justify-center items-center">
-      <!-- <h1>GALLERY</h1> -->
+      <h1 class="visually-hidden">GALLERY</h1>
     </section>
+
     <section class="profile-container flex ">
 
 
@@ -69,7 +56,7 @@
 
         <div class="profile-user-settings flex flex-row flex-wrap gap-1 items-center">
           <h3 class="profile-user-name">RPD Events</h3>
-          <button class="rpd-button">FOLLOW +</button>
+          <button class="rpd-button-secondary">FOLLOW +</button>
         </div>
 
         <div class="profile-stats">
@@ -94,11 +81,17 @@
     </section>
 
     <section class="gallery-container">
-    <div class="img-grid" id="imageGrid"></div>
+      <h1 class="visually-hidden"> Gallery</h1>
+      <div class="img-grid" id="imageGrid"></div>
     </section>
-    <div id="lightgallery" class="gallery-wrapper">
 
-    </div>
+
+    <section class="join-us shake-effect gallery-join-us">
+      <div class="join-us-container flex flex-col items-center justify-center gap-1">
+        <h1><span class="color-accent">Seen enough? </span>Now it’s your turn to make us work ! </h1>
+        <button class="rpd-button-secondary">GET A QUOTE</button>
+      </div>
+    </section>
 
   </main>
 

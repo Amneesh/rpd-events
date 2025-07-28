@@ -5,9 +5,7 @@
   background-repeat: none;
 }
 
-section {
-  padding: 4rem 0rem;
-}
+
 
 .events-section {
   min-height: 100vh;
@@ -76,6 +74,10 @@ section {
 }
 
 /* Optional: Heading */
+
+.event-categories{
+  padding: 2rem 0rem;
+}
 .event-categories h1 {
   color: var(--color-text);
   text-align: center;
@@ -87,7 +89,16 @@ section {
 .why-us{
 position: relative;
 min-height: 100vh;
+height: 100vh;
   color:var(--color-text);
+margin: 10rem 0rem;
+}
+@media only screen and (min-width:600px){
+  .why-us{
+    
+     
+    margin-top: 0rem;
+    }
 }
 .why-us::before {
   content: "";
@@ -100,8 +111,8 @@ min-height: 100vh;
   z-index: 0;
 }
 .why-us-container{
-  padding: 0rem 1rem;
-   position: absolute;
+  padding: 5rem 1rem;
+   position: relative;
   width: 100%;
 }
 .why-us-description{
@@ -181,18 +192,7 @@ min-height: 100vh;
 
 /* why us */
 
-.faq-section {
-  height: 100%;
-  min-height: 100vh;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0rem 2rem;
-  font-family: 'Segoe UI', sans-serif;
 
-  h1 {
-    color: var(--color-text)
-  }
-}
 
 .insta-section {
   padding: 40px 20px;
@@ -319,71 +319,10 @@ min-height: 100vh;
   max-width: 700px;
   color: #555;
 }
-
+.service-details{
+  padding: 2rem 0rem 10rem 0rem;
+}
 .swiper-button-prev, .swiper-button-next{
   color: var(--color-accent) !important;
 }
 
-.faq-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.faq-card {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-}
-
-.faq-toggle {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 18px 24px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  text-align: left;
-  color: #111827;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.3s;
-}
-
-.faq-toggle:hover {
-  background-color: #f9fafb;
-}
-
-.faq-toggle .icon {
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
-}
-
-.faq-card.active .faq-toggle .icon {
-  transform: rotate(45deg);
-}
-
-.faq-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
-  padding: 0 24px;
-  background-color: #fafafa;
-}
-
-.faq-card.active .faq-content {
-  padding: 16px 24px 24px;
-  max-height: 500px;
-}
-
-.faq-content p {
-  margin: 0;
-  font-size: 1rem;
-  color: #4b5563;
-  line-height: 1.6;
-}

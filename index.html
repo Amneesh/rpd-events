@@ -8,9 +8,6 @@
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./flex.css" />
 
-  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
@@ -20,35 +17,20 @@
 </head>
 
 <body class="home-page">
-  <!-- <header class="rpd-header">
-   
-    <div class="site-header">
-     
-      <nav class="nav-links">
-        <a href="./index.html">Home</a>
-        <a href="./events.html">Events</a>
-        <a href="./gallery.html">Gallery</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-      <div class="join-button">
-        <button class="rpd-button">JOIN US</button>
-      </div>
-    </div>
-  </header> -->
 
-   <header>
+  <header class="rpd-header">
     <button id="menu-toggle" class="hamburger">
       <span></span>
       <span></span>
       <span></span>
     </button>
-  
+
     <nav id="slide-menu" class="nav-links">
       <ul>
         <li> <a href="./index.html">Home</a></li>
         <li><a href="./events.html">Events</a></li>
         <li> <a href="./gallery.html">Gallery</a></li>
-        <li>   <a href="./contact.html">Contact</a></li>
+        <li> <a href="./contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -67,41 +49,31 @@
       <div class="overlay flex flex-col  justify-center items-center gap-8">
         <div class="hero-content">
           <img src="./resources/rpd-logo.png" alt="" />
-          <!-- <p>
-            Where every moment becomes a celebration. We create unforgettable
-            event experiences with light, sound, and soul.
-          </p> -->
-          <!-- <a href="#contact" class="rpd-button">Book Now</a> -->
-          <button class="glowbutton">Book Now</button>
-        </div>
-      </div>
-      <div class="hero-container flex flex-col md:flex-row justify-between gap-1">
-        <div class="hero-sub-container left flex flex-col justify-between gap-2">
-          <h4>
-            Discover the Magic of RPD Events
-          </h4>
-          <div class="hero-container-content flex flex-col items-start gap-25">
-            <p>From Bhangra beats to brilliant lights, </p>
-            <p>We don’t just throw events — we create unforgettable moments.</p>
-            <p>📱 Follow us: @rpdevents</p>
+
+          <blockquote class="inspiring-quote">
+            <p> We put in the hours you don’t see, so you can enjoy the moments you never forget.</p>
+            <cite>RPD EVENTS</cite>
+          </blockquote>
+
+          <div class="hero-buttons flex flex-row flex-wrap gap-1 justify-center items-center">
+            <button class="rpd-button-secondary">GET A QUOTE</button>
+
           </div>
         </div>
+      </div>
 
-         <!-- <div class="hero-sub-container right flex flex-col justify-between gap-2">
-          <h4>
-            Discover the Magic of RPD Events
-          </h4>
-          <div class="hero-container-content flex flex-col items-start gap-25">
-            <p>From Bhangra beats to brilliant lights, </p>
-            <p>We don’t just throw events — we create unforgettable moments.</p>
-            <p>📱 Follow us: @rpdevents</p>
-          </div>
-        </div> -->
+      <div class="hero-container flex flex-col md:flex-row justify-center gap-1">
+        <a href="#whoWeAre">
+          <svg class="arrows">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+          </svg>
+        </a>
+
 
       </div>
-      <div class="dj-image-container">
-        <img src="./resources/dj-front.jpg" alt="">
-      </div>
+
     </section>
 
     <!-- <section class="maintainence">
@@ -180,7 +152,7 @@
           </div>
           <div class="text-side">
             <h1><span class="color-accent">Who</span> We Are</h1>
-            
+
             <p>
               At RPD Events, we specialize in creating unforgettable
               experiences through expert lighting décor, live DJ performances,
@@ -229,28 +201,18 @@
       </div>
     </section>
 
-    <section class="join-us">
+    <section class="join-us shake-effect">
       <div class="join-us-container flex flex-col items-center justify-center gap-1">
         <h1>Still booking boring <span class="color-accent">Events ?</span> That’s a bold choice</h1>
-        <button class="rpd-button">GET A QUOTE</button>
+        <button class="rpd-button-secondary">GET A QUOTE</button>
       </div>
     </section>
-    <!-- <section class="counter-section">
-      <video autoplay muted loop playsinline class="background-video">
-        <source src="./resources/dj-disco.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-<div class="counter-section-content">
 
-
-    
-        </div>
-    </section> -->
 
     <section class="services-section" id="section">
-      <h1>OUR SERVICES</h1>
-       <div class="underline"></div>
-      <div class="services-container flex flex-wrap flex-row justify-evenly items-center col-gap-1 row-gap-1">
+      <h1>OUR <span class="color-accent">SERVICES</span></h1>
+      <div class="underline"></div>
+      <div class="services-container flex flex-wrap flex-row justify-evenly items-center gap-4">
         <!-- card 1 -->
         <article class="service-card flex flex-col justify-center items-center gap-1" data-service="dj">
           <img src="./resources/services-icons/dj.png" alt="dj-service">
@@ -267,7 +229,7 @@
             </svg>
           </button>
         </article>
-    
+
         <!-- card 2 -->
         <article class="service-card flex flex-col justify-center items-center gap-1" data-service="led">
           <img src="./resources/services-icons/led-screen.png" alt="dj-service">
@@ -284,7 +246,7 @@
             </svg>
           </button>
         </article>
-      
+
         <!-- card 3 -->
         <article class="service-card flex flex-col justify-center items-center gap-1" data-service="lighting">
           <img src="./resources/services-icons/lighting.png" alt="dj-service">
@@ -301,7 +263,7 @@
             </svg>
           </button>
         </article>
-     
+
         <!-- card 4 -->
         <article class="service-card flex flex-col justify-center items-center gap-1" data-service="sound">
           <img src="./resources/services-icons/sound-system.png" alt="dj-service">
@@ -318,7 +280,7 @@
             </svg>
           </button>
         </article>
-      
+
 
         <!-- card 5 -->
         <article class="service-card flex flex-col justify-center items-center gap-1" data-service="dance">
@@ -336,7 +298,7 @@
             </svg>
           </button>
         </article>
-      
+
         <!-- card 6 -->
         <article class="service-card flex flex-col justify-center items-center gap-1" data-service="photography">
           <img src="./resources/services-icons/photography.png" alt="dj-service">
@@ -395,57 +357,7 @@
 
         <div class="carousel-container flex items-center">
           <div class="carousel-track" id="track">
-            <div class="testimonial">
-              <img src="https://i.pravatar.cc/50?img=1" alt="image$1" />
-              <h4>John Doe</h4>
-              <p>Above and beyond expectations.</p>
-            </div>
-            <div class="testimonial">
-              <img src="https://i.pravatar.cc/50?img=2" alt="image$1" />
-              <h4>Asa Walter</h4>
-              <p>Rebranded and revamped everything.</p>
-            </div>
-            <div class="testimonial">
-              <img src="https://i.pravatar.cc/50?img=3" alt="image$1" />
-              <h4>Zahid Miles</h4>
-              <p>Friendly problem solvers. Loved it!</p>
-            </div>
-            <div class="testimonial">
-              <img src="https://i.pravatar.cc/50?img=4" alt="image$1" />
-              <h4>Casper Leigh</h4>
-              <p>Super happy with their services.</p>
-            </div>
-            <div class="testimonial">
-              <img src="https://i.pravatar.cc/50?img=5" alt="image$1" />
-              <h4>Cian Reid</h4>
-              <p>Supportive and knowledgeable team.</p>
-            </div>
-            <!-- Duplicate for seamless scroll -->
-            <div class="testimonial">
-              <img src="https://i.pravatar.cc/50?img=1" alt="image$1" />
-              <h4>John Doe</h4>
-              <p>Above and beyond expectations.</p>
-            </div>
-            <div class="testimonial">
-              <img src="https://i.pravatar.cc/50?img=2" alt="image$1" />
-              <h4>Asa Walter</h4>
-              <p>Rebranded and revamped everything.</p>
-            </div>
-            <div class="testimonial">
-              <img src="https://i.pravatar.cc/50?img=2" alt="image$1" />
-              <h4>Asa Walter</h4>
-              <p>Rebranded and revamped everything.</p>
-            </div>
-            <div class="testimonial">
-              <img src="https://i.pravatar.cc/50?img=2" alt="image$1" />
-              <h4>Asa Walter</h4>
-              <p>Rebranded and revamped everything.</p>
-            </div>
-            <div class="testimonial">
-              <img src="https://i.pravatar.cc/50?img=2" alt="image$1" />
-              <h4>Asa Walter</h4>
-              <p>Rebranded and revamped everything.</p>
-            </div>
+
           </div>
         </div>
       </div>

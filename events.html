@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RPD EVENTS</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
+
   <link rel="stylesheet" href="./flex.css" />
   <link rel="stylesheet" href="./events.css" />
 
@@ -23,20 +23,6 @@
 </head>
 
 <body class="event-page">
-  <!-- <header class="rpd-header">
-    <div class="site-header">
-     
-      <nav class="nav-links">
-        <a href="./index.html">Home</a>
-        <a href="./events.html">Events</a>
-        <a href="./gallery.html">Gallery</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-      <div class="join-button">
-        <button class="rpd-button">JOIN US</button>
-      </div>
-    </div>
-  </header> -->
 
   <header>
     <button id="menu-toggle" class="hamburger">
@@ -57,7 +43,7 @@
 
   <main>
     <section class="page-header-wrapper events-page flex justify-center items-center">
-      <!-- <h1>EVENTS</h1> -->
+      <h1 class="visually-hidden">EVENTS</h1>
     </section>
 
     <section class="event-categories flex flex-col gap-2 items-center" id="eventCategories">
@@ -177,14 +163,14 @@
     </section>
 
 
-    <section class="join-us">
+    <section class="join-us shake-effect">
       <div class="join-us-container flex flex-col items-center justify-center gap-1">
         <h1>Some call it extra. We call it <span class="color-accent">RPD</span> ! </h1>
-        <button class="rpd-button">GET A QUOTE</button>
+        <button class="rpd-button-secondary">GET A QUOTE</button>
       </div>
     </section>
 
-    <section id="serviceDetails">
+    <section id="serviceDetails" class="service-details">
       <h2 class="visually-hidden">Service Details</h2>
       <div class="swiper-container" id="servicesCarousel">
         <div class="swiper-wrapper" id="swiperWrapper">
@@ -222,60 +208,7 @@
 
   
 
-    <section class="faq-section flex flex-col justify-start items-start gap-1">
-      <h1>Frequently Asked Questions</h1>
-
-      <div class="faq-container">
-        <div class="faq-card">
-          <button class="faq-toggle">How early should I book?<span class="icon">+</span></button>
-          <div class="faq-content">
-            <p>We recommend booking at least 1 to 2 months in advance to ensure availability, especially during peak
-              event seasons. However, we do accommodate last-minute bookings based on availability.</p>
-          </div>
-        </div>
-
-        <div class="faq-card">
-          <button class="faq-toggle">Do you provide on-site support?<span class="icon">+</span></button>
-          <div class="faq-content">
-            <p>Yes, our team is present on-site throughout your event to handle setup, technical support, and any
-              last-minute adjustments to ensure everything runs smoothly.</p>
-          </div>
-        </div>
-
-        <div class="faq-card">
-          <button class="faq-toggle">Can I customize a package?<span class="icon">+</span></button>
-          <div class="faq-content">
-            <p>Absolutely! All our packages are fully customizable. You can mix and match services, choose your
-              preferred equipment, and personalize the experience to match your event’s theme and budget.</p>
-          </div>
-        </div>
-
-        <div class="faq-card">
-          <button class="faq-toggle">What areas do you serve?<span class="icon">+</span></button>
-          <div class="faq-content">
-            <p>We primarily serve the Greater Vancouver Area and surrounding regions. For events outside this area, feel
-              free to contact us—we may still be able to accommodate.</p>
-          </div>
-        </div>
-
-        <div class="faq-card">
-          <button class="faq-toggle">Is a deposit required?<span class="icon">+</span></button>
-          <div class="faq-content">
-            <p>Yes, a deposit is required to confirm your booking. The remaining balance can be paid closer to the event
-              date. Specific payment terms will be shared during the booking process.</p>
-          </div>
-        </div>
-
-        <div class="faq-card">
-          <button class="faq-toggle">What if I need to cancel or reschedule?<span class="icon">+</span></button>
-          <div class="faq-content">
-            <p>You can cancel or reschedule up to 7 days before the event for a partial refund. For last-minute changes,
-              please reach out to our team and we'll do our best to assist you.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
+   
   </main>
 
   <div class="floating-social">
