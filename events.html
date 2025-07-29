@@ -53,8 +53,9 @@
       <h1 class="visually-hidden">EVENTS</h1>
     </section>
 
-    <section class="event-categories flex flex-col gap-2 items-center" id="eventCategories">
+    <section class="event-categories flex flex-col gap-1 items-center" id="eventCategories">
       <h1>EVENTS WE <span class="color-accent">CATER</span></h1>
+      <div class="underline"></div>
       <div class="event-tiles">
         <h2 class="sr-only">Event Categories</h2>
 
@@ -143,89 +144,84 @@
 
     </section>
 
-    <section class="why-us flex flex-col items-center justify-center">
+    <section class="why-us flex flex-col items-center justify-center gap-1">
   <h1>WHY CHOOSE <span class="color-accent">RPD</span></h1>
+   <div class="underline"></div>
       <div class="why-us-container flex flex-col lg:flex-row items-center justify-around gap-6">
         <div class="why-us-description">
 
-          <div class="why-point flex flex-row justify-between align-start gap-1">
-            <div class="why-us-image"><img src="./resources/why-us-icons/client.png" alt=""></div>
+          <div data-image="./resources/event-bg.webp" class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right" >
+            <div class="why-us-image"><img src="./resources/why-us-icons/unmatched.png" alt=""></div>
             <div class="why-us-text">
-              <h3>Unmatched Expertise</h3>
+              <h4>Unmatched Expertise</h4>
               <p>
-                With years of experience in the event and entertainment industry, we bring deep knowledge, precision, and
-                creativity to every celebration — from intimate gatherings to large-scale productions.
+                Expertly blending creativity and precision to deliver unforgettable events, big or small.
               </p>
             </div>
           </div>
 
-          <div class="why-point flex flex-row justify-between align-start gap-1 ">
-            <div class="why-us-image"><img src="./resources/why-us-icons/client.png" alt=""></div>
+          <div data-image="./resources/dj-contact.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
+            <div class="why-us-image"><img src="./resources/why-us-icons/complete.png" alt=""></div>
             <div class="why-us-text">
-              <h3>Complete Entertainment Solutions</h3>
+              <h4>Complete Party Package</h4>
               <p>
-                From DJs and live dance performances to LED screens, professional lighting, and sound — we are your
-                one-stop solution for everything that makes an event unforgettable.
+               Your all-in-one partner for music, lighting, visuals, and performances that wow.
               </p>
             </div>
           </div>
 
-          <div class="why-point flex flex-row justify-between align-start gap-1 ">
-            <div class="why-us-image"><img src="./resources/why-us-icons/client.png" alt=""></div>
+          <div data-image="./resources/dj-contact.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right">
+            <div class="why-us-image"><img src="./resources/why-us-icons/seamless.png" alt=""></div>
             <div class="why-us-text">
-              <h3>Seamless Execution</h3>
+              <h4>Seamless Execution</h4>
               <p>
-                We handle every detail — planning, setup, on-site coordination, and technical support — so you can relax
-                and enjoy the moment. Your event runs smoothly, professionally, and exactly as envisioned.
+                From setup to showtime, we manage every detail so you can enjoy your event stress-free.
               </p>
             </div>
           </div>
 
 
         </div>
-        <div class="why-us-main-image animate-rotate-in">
+        <div class="why-us-main-image animate-rotate-in" id="whyUsMainContainer">
           <p class="browser-warning">
             If this looks wonky to you it's because this browser doesn't support the CSS
             property 'aspect-ratio'.
           </p>
           <div class="stack">
             <div class="why-us-card">
-              <div class="image"><img src="./resources/dj-contact.jpg" alt="dj-front"></div>
+              <div class="image"><img id="main-why-us-image" src="./resources/dj-contact.jpg" alt="dj-front"></div>
             </div>
           </div>
 
         </div>
         <div class="why-us-description">
           
-          <div class="why-point flex flex-row justify-between align-start gap-1 ">
-            <div class="why-us-image"><img src="./resources/why-us-icons/client.png" alt=""></div>
+          <div data-image="./resources/dj-contact.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
+            <div class="why-us-image"><img src="./resources/why-us-icons/customized.png" alt=""></div>
             <div class="why-us-text">
-              <h3>Customized to Your Vision</h3>
+              <h4>Customized to Your Vision</h4>
               <p>
-                No two events are the same. We tailor every experience to reflect your style, theme, and audience —
-                whether it's a traditional cultural event, modern wedding, or high-profile corporate gathering.
+              We bring your unique event vision to life with tailored experiences and personal touches.
               </p>
             </div>
           </div>
 
-          <div class="why-point flex flex-row justify-between align-start gap-1 ">
-            <div class="why-us-image"><img src="./resources/why-us-icons/client.png" alt=""></div>
+          <div data-image="./resources/dj-contact.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right">
+            <div class="why-us-image"><img src="./resources/why-us-icons/vibrant.png" alt=""></div>
             <div class="why-us-text">
-              <h3>Vibrant Cultural Touch</h3>
+              <h4>Vibrant Cultural Touch</h4>
               <p>
-                We specialize in Punjabi, Bollywood, and South Asian events, offering energetic performances, traditional
-                brass bands, and music that speaks to your roots — while embracing modern flair.
+Infusing every celebration with the rich energy of Punjabi, Bollywood, and South Asian traditions.
               </p>
             </div>
           </div>
 
-          <div class="why-point flex flex-row justify-between align-start gap-1 ">
+          <div data-image="./resources/dj-contact.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
             <div class="why-us-image"><img src="./resources/why-us-icons/client.png" alt=""></div>
             <div class="why-us-text">
-              <h3>Client Satisfaction First</h3>
+              <h4>Client Satisfaction First</h4>
               <p>
-                Our clients trust us for our commitment, responsiveness, and passion for perfection. We go above and
-                beyond to turn your ideas into experiences your guests will talk about for years.
+                Trusted by clients for our passion, professionalism, and obsession with flawless execution.
               </p>
             </div>
           </div>
@@ -237,7 +233,7 @@
     <section class="join-us shake-effect">
       <div class="join-us-container flex flex-col items-center justify-center gap-1">
         <h1>Some call it extra. We call it <span class="color-accent">RPD</span> ! </h1>
-        <button class="rpd-button-secondary">GET A QUOTE</button>
+        <button class="rpd-button-secondary go-to-contact">GET A QUOTE</button>
       </div>
     </section>
 
@@ -304,9 +300,9 @@
   <footer class="footer-section">
 
     <section class="subscription-box">
-      <div class="sub-box flex flex-row column-gap-2 items-center">
+      <div class="sub-box flex flex-row column-gap-2 items-center justify-between">
         <div class="sub-box-title">
-          <h4>Subscribe to our events</h4>
+          <h4>Join Us !</h4>
         </div>
         <div class="sub-box-content">
 

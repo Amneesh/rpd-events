@@ -32,6 +32,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+ document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".go-to-contact").forEach(button => {
+      button.addEventListener("click", () => {
+        window.location.href = "/contact.html";
+      });
+    });
+  });
 
 document.addEventListener("DOMContentLoaded", () => {
   const topImg = document.querySelector(".hero-img-top");
@@ -165,6 +172,7 @@ const servicesData = [
       <div class="service-slide">
         <img src="${img}" alt="${title}" />
         <h2>${title}</h2>
+        <div class="underline"></div>
         <p>${description}</p>
       </div>
     `;
@@ -238,17 +246,17 @@ if (document.body.classList.contains("home-page")) {
 const testimonialsData = [
   {
     "name": "Himani Thakur",
-    "role": "Local Guide · 34 reviews · 14 photos",
+    "role": "34 reviews",
     "time": "3 years ago",
     "text": "I have learnt bhangra from here and they not only teach bhangra but also polish the skills out of a person. It's pretty disciplined place where everybody focus on their hard work and sincerity to learn bhangra.",
-    "likes": "🙏1"
+    "likes": "🙏"
   },
   {
     "name": "Gurjit Virk",
     "role": "1 review",
     "time": "2 years ago",
     "text": "RPD bhangra academy is one of the best academy, my kids are doing great in bhangra only because of the best coaching skills they get taught by the fantastic coach",
-    "likes": "❤️1"
+    "likes": "❤️"
   },
   {
     "name": "Ekjot Sarang",
@@ -331,45 +339,51 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(document.getElementById('whoWeAre'));
 });
 
-
+function truncateWords(str, limit) {
+  const words = str.split(' ');
+  if (words.length <= limit) return str;
+  return words.slice(0, limit).join(' ') + '...';
+}
 
 
 // Create testimonial divs dynamically
 const track = document.getElementById('track');
   track.innerHTML = ''; // Clear if needed
 
-  testimonialsData.forEach(test => {
-    const firstLetter = test.name.charAt(0).toUpperCase();
-    const colorIndex = firstLetter.charCodeAt(0) % colors.length;
-    const bgColor = colors[colorIndex];
+ testimonialsData.forEach(test => {
+  const firstLetter = test.name.charAt(0).toUpperCase();
+  const colorIndex = firstLetter.charCodeAt(0) % colors.length;
+  const bgColor = colors[colorIndex];
 
-    const testimonialDiv = document.createElement('div');
-    testimonialDiv.className = 'testimonial';
+  const testimonialHTML = `
+   
+     <div class="testimonial-card flex flex-col justify-between items-center">
+        <div class="t-card-header flex flex-row justify-between items-center gap-2">
+          <div class="avatar" style="background-color: ${bgColor};">${firstLetter}</div>
+          <h4>${test.name}</h4>
+        </div>
+        <div class="t-card-body">
+        <p>${truncateWords(test.text, 10)}</p>
+        </div>
+        <div class="t-card-footer flex flex-row justify-between items-center">
+         <img src="./resources/google-logo.png" class="google-logo" alt="">
+          <p> ${test.role}</p>
+        </div>
+      </div>
+    
+  `;
 
-    const avatarDiv = document.createElement('div');
-    avatarDiv.className = 'avatar';
-    avatarDiv.textContent = firstLetter;
-    avatarDiv.style.backgroundColor = bgColor;
+  // Create a container and set innerHTML to safely parse the string into DOM elements
+  const wrapper = document.createElement('div');
+  wrapper.innerHTML = testimonialHTML;
 
-    const nameH4 = document.createElement('h4');
-    nameH4.textContent = test.name;
+  // Append the parsed element to the track
+  track.appendChild(wrapper.firstElementChild);
+});
 
-    const para = document.createElement('p');
-    para.textContent = test.text;
-
-    const footer = document.createElement('small');
-    footer.textContent = `${test.time} · ${test.role}`;
-
-    testimonialDiv.appendChild(avatarDiv);
-    testimonialDiv.appendChild(nameH4);
-    testimonialDiv.appendChild(para);
-    testimonialDiv.appendChild(footer);
-
-    track.appendChild(testimonialDiv);
-  });
 
 if (track) {
-  const cards = track.querySelectorAll('.testimonial');
+  const cards = track.querySelectorAll('.testimonial-card');
   let scrollX = 0;
   const speed = 1;
 

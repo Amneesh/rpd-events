@@ -395,6 +395,7 @@ height: 50px;
 .hero {
   position: relative;
   min-height: 100vh; /* Banner height */
+  height: 100%;
   width: 100%;
 
   display: flex;
@@ -501,6 +502,7 @@ img{
   left: 0;
   width: 100%;
   min-height: 100vh;
+  height: 100%;
   padding: 4rem;
 
   padding: 0 2rem 5rem 2rem;
@@ -672,6 +674,7 @@ img{
 
 .who-we-are {
   min-height: 60vh;
+  height: 100%;
   position: relative;
   background-color: var(--primary-black-color);
   color: var(--color-text);
@@ -721,6 +724,13 @@ img{
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+}
+.big-text{
+   font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+    font-size: clamp(24px, 4vw, 30px);
+
+
 }
 
 .who-we-are-image-container {
@@ -898,6 +908,9 @@ img{
   border: 0.5px solid var(--color-accent);
   height: 350px;
 
+  h3{
+    color: var(--color-accent);
+  }
   img {
     width: 60px;
     filter: invert(1);
@@ -929,7 +942,7 @@ img{
   background-color: transparent;
   transition: 0.2s cubic-bezier(0.19, 1, 0.22, 1);
   opacity: 1;
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 
 .service-btn::after {
@@ -947,6 +960,7 @@ img{
 }
 
 .service-btn .icon {
+  color: var(--color-primary);
   transform: translateX(0%);
   transition: 0.2s linear;
   animation: attention 1.2s linear infinite;
@@ -1065,8 +1079,18 @@ img{
 
 /* footer */
 
+.sub-box-title{
+  width: 20%;
+}
+.sub-box-content{
+  max-width: 350px;
+  width: 80%;
+}
+
 .sub-input-container {
   position: relative;
+
+  width: 100%;
   input {
     width: 100%;
     padding: 1rem 4rem 1rem 1rem;
@@ -1239,7 +1263,7 @@ img{
   position: relative;
 
   min-height: 100vh;
-  height: 100vh;
+  height: 100%;
   background-color: var(--primary-black-color);
 
   h1 {
@@ -1247,17 +1271,17 @@ img{
     text-align: center;
     color: var(--color-text);
     padding: 1rem;
+  
   }
 }
 .testimonial-section::before {
-  content: "❝"; /* Unicode block quote */
-  position: absolute;
-  top: 10%;
-  left: 2rem;
-  font-size: 10rem;
-
-  color: rgb(133, 133, 133);
-  z-index: 1;
+    content: "❝";
+    position: absolute;
+    top: 12%;
+    left: 0rem;
+    font-size: clamp(8rem, 4vw, 12rem);
+    color: rgb(133, 133, 133);
+    z-index: 1;
 }
 
 .testimonial-section::after {
@@ -1283,7 +1307,7 @@ img{
   width: 60px;
   height: 4px;
   background-color: var(--color-accent-light);
-  margin: 0 auto 3rem;
+  margin: 0 auto;
   border-radius: 2px;
 }
 .underline-left {
@@ -1298,7 +1322,7 @@ img{
   overflow: hidden;
   width: 100%;
 
-  height: 300px;
+  height: 600px;
 
   margin: 0 auto;
 
@@ -1307,22 +1331,49 @@ img{
 
 .carousel-track {
   display: flex;
+
   gap: 2rem;
+
   will-change: transform;
 }
 
-.testimonial {
-  flex: 0 0 250px;
-  background: rgb(133, 133, 133);
-  border-radius: 20px;
-  padding: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+.testimonial-card{
+max-width: 300px;
+width: 100%;
+ background: rgb(133, 133, 133);
+   flex: 0 0 auto;
+ border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgb(0, 0, 0);
   transition: all 1s ease-in-out;
   text-align: left;
   opacity: 1;
   transform: scale(0.9);
-  height: 250px;
+
+  height: 300px;
+.t-card-header{
+  width: 100%;
+  padding: 0rem 0rem 1rem 0rem;
 }
+  .t-card-body{
+     width: 100%;
+    max-height: 100px;
+    overflow-y: auto;
+  }
+  .t-card-footer{
+     width: 100%;
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  .google-logo{
+    width: 50px;
+  }
+  p{
+    font-weight: 100;
+  }
+}
+
+
+
 .avatar {
   width: 50px;
   height: 50px;
@@ -1333,12 +1384,11 @@ img{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
   user-select: none;
   text-transform: uppercase;
 }
 
-.testimonial.focused {
+.testimonial-card.focused {
   background: var(--primary-white-color);
   border: 1px solid var(--color-accent);
   transform: scale(1.15);
@@ -1346,22 +1396,6 @@ img{
   z-index: 2;
 }
 
-.testimonial img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  object-fit: cover;
-}
-
-.testimonial h4 {
-  margin: 0.5rem 0 0.25rem;
-}
-
-.testimonial p {
-  font-size: 0.9rem;
-  color: #555;
-}
 .review-button{
   padding: 2rem;
   width: 100%;
