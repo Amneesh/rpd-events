@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./contact.css" />
   <link rel="stylesheet" href="./flex.css" />
   <script src="./animations.js" defer></script>
+  <script src="./contact.js" defer></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -19,7 +20,7 @@
 
 <body class="contact-page">
 
- <header class="rpd-header">
+  <header class="rpd-header">
 
     <div class="rpd-logo">
       <a href="./index.html"><img src="./resources/rpd-logo.png" alt="" /></a>
@@ -43,12 +44,15 @@
   </header>
 
   <main>
-    <section class="page-header-wrapper contact-map contact-page flex justify-center items-center animate-slide-down " data-delay="0.2s">
+    <section class="page-header-wrapper contact-map contact-page flex justify-center items-center animate-slide-down "
+      data-delay="0.2s">
 
       <h1 class="visually-hidden">RPD map</h1>
+      
+
       <iframe class="g-map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2609.699754141574!2d-122.8625132!3d49.149324799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d932d75a11f1%3A0x91d8c66b416e6b8b!2sSurrey%20Bhangra%20-%20Fan%20Bhangre%20De%20By%20Bhupinder%20Singh!5e0!3m2!1sen!2sca!4v1748404067097!5m2!1sen!2sca"
-        style="border: 0;filter: invert(100%) hue-rotate(80deg);" allowfullscreen="" loading="lazy"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5219.399141656212!2d-122.86508812321976!3d49.149328280187824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d950f42214ab%3A0xe6f5832faf826c08!2sRpd%20aound!5e0!3m2!1sen!2sca!4v1753905172039!5m2!1sen!2sca"
+       style="border: 0;filter: invert(100%) hue-rotate(80deg);" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
@@ -69,13 +73,16 @@
             <i class="fa-solid fa-phone"></i>
             <div class="contact-info-container flex flex-col gap-50">
               <h5>LET'S TALK</h5>
-               <a href="tel:+17788610450" class="flex flex-col">+1 (778) 861-0450 <span class="color-primary"> - Kulvir singh</span></a>
-               <a href="tel:+17787980305" class="flex flex-col">+1 (778) 798-0305 <span class="color-primary"> - Parminder Singh</span></a>
+              <a href="tel:+17788610450" class="flex flex-col">+1 (778) 861-0450 <span class="color-primary"> - Kulvir
+                  singh</span></a>
+              <a href="tel:+17787980305" class="flex flex-col">+1 (778) 798-0305 <span class="color-primary"> -
+                  Parminder Singh</span></a>
 
             </div>
           </div>
 
-          <a href="linkto:rpd.surrey@gmail.com" class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-left">
+          <a href="linkto:rpd.surrey@gmail.com"
+            class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-left">
             <!-- <img src="" alt="" /> -->
             <i class="fa-solid fa-location-dot"></i>
             <div class="contact-info-container flex flex-col gap-50">
@@ -84,7 +91,8 @@
             </div>
           </a>
 
-          <a href="mailto:rpd.surrey@gmail.com" class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-right ">
+          <a href="mailto:rpd.surrey@gmail.com"
+            class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-right ">
             <!-- <img src="" alt="" /> -->
             <i class="fa-solid fa-envelope"></i>
             <div class="contact-info-container flex flex-col gap-50">
@@ -93,10 +101,11 @@
             </div>
           </a>
 
-          <a href="linkto:rpd.surrey@gmail.com" class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-left">
+          <a href="linkto:rpd.surrey@gmail.com"
+            class="contact-info-subwrapper flex flex-row items-start column-gap-1 animate-slide-left">
             <!-- <img src="" alt="" /> -->
             <i class="fa-solid fa-clock"></i>
-            <div class="contact-info-container flex flex-col gap-50" >
+            <div class="contact-info-container flex flex-col gap-50">
               <h5>WORKING HOURS</h5>
               <p>Monday - Friday</p>
               <p>07-09</p>
@@ -110,7 +119,7 @@
 
         <div class="social-icons flex flex-col gap-1">
 
-<h4>FOLLOW US ON SOCIAL MEDIA</h4>
+          <h4>FOLLOW US ON SOCIAL MEDIA</h4>
           <div class="footer-social-media-icons">
             <a href="https://wa.me/12369715969?text=Hi!%20I'm%20interested%20in%20your%20services.%20Please%20tell%20me%20more."
               target="_blank">
@@ -131,10 +140,11 @@
 
       <div class="contact-form shake-effect flex flex-col gap-2" id="contactFormContainer">
         <div class="contact-header flex flex-col gap-25">
-          <h2>Get in touch </h2>
+          <h2 id="contactFormHeading">Get in touch </h2>
+          <h2 id="contactFormSuccessHeading">Thank You </h2>
           <div class="underline-left"></div>
         </div>
-        <form id="contactForm" action="#" method="POST">
+        <form id="contactForm" >
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your full name" required />
 
@@ -146,6 +156,24 @@
 
           <button type="submit" class="rpd-button-secondary">Send Message</button>
         </form>
+           <div id="form-status-success" class="flex flex-col gap-2">
+                  <div class="text-message">
+                    <p>
+                      Thank you for reaching out.</p> <p>We’ll be in touch with you
+                        shortly !</p>
+                  </div>
+              
+                  <button class="rpd-button-secondary open-gallery">
+                    Watch Gallery
+                  </button>
+                </div>
+                <div id="form-status-fail" style="margin-top: 10px">
+                  <p>
+                    <i class="fa fa-warning"></i>
+                    Oops! Something went wrong. Please try again later or
+                    contact support if the issue persists
+                  </p>
+                </div>
       </div>
     </section>
     <section class="faq-section">

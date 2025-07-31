@@ -161,6 +161,7 @@ height: 50px;
 } */
 
 .rpd-button-secondary {
+  max-width: 250px;
   padding: 17px 40px;
   border-radius: 50px;
   cursor: pointer;
