@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = document.querySelector("#name").value;
     const email = document.querySelector("#email").value;
     const message = document.querySelector("#message").value;
-    const contactFormHeading = document.querySelector("#contactFormHeading").value;
-    const contactFormSuccessHeading = document.querySelector("#contactFormSuccessHeading").value;
+    const contactFormHeading = document.querySelector("#contactFormHeading");
+    const contactFormSuccessHeading = document.querySelector("#contactFormSuccessHeading");
 
     const to = "amneeshsingh5@gmail.com";
     const subject = `RPD EVENTS website inquiry from ${name}`;
@@ -46,3 +46,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+const faqToggles = document.querySelectorAll(".faq-toggle");
+
+  faqToggles.forEach(toggle => {
+    toggle.addEventListener("click", () => {
+      const parent = toggle.closest(".faq-card");
+      parent.classList.toggle("active");
+
+      // Close others (optional)
+      faqToggles.forEach(other => {
+        if (other !== toggle) {
+          other.closest(".faq-card").classList.remove("active");
+        }
+      });
+    });
+  });

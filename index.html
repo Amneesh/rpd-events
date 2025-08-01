@@ -358,20 +358,26 @@
   </div>
 
   <footer class="footer-section">
-    <section class="subscription-box">
+       <section class="subscription-box">
       <div class="sub-box flex flex-row column-gap-2 items-center justify-between">
-        <div class="sub-box-title">
+        <div class="sub-box-title" id="subBoxTitle">
           <h4>Join Us !</h4>
         </div>
-        <div class="sub-box-content">
-          <div class="sub-input-container">
-            <input type="email" class="subscribe-input" placeholder="Enter your email" />
-            <button class="subscribe-button">
+        <div class="sub-box-content" id="subBoxContent">
+
+          <form class="sub-input-container" onsubmit="handleSubscribe(event)">
+            <input type="email" class="subscribe-input" placeholder="Enter your email" required />
+            <button type="submit" class="subscribe-button">
               <i class="fa-solid fa-paper-plane"></i>
             </button>
-          </div>
+          </form>
+
+
         </div>
+        <div class="sub-success"  id="subSuccess"> <h3 class="color-accent">Thank you</h3> <h4>You have been subscribe to RPD Events !</h4></div>
+         <div class="sub-fail" id="subFail"> <p class="color-accent">Oops !</p> <p>Please try again after refreshing the page</p></div>
       </div>
+
     </section>
     <section class="footer-info">
       <h4 class="visually-hidden">Logo and description</h4>

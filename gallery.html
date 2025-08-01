@@ -11,7 +11,7 @@
 
   <script src="./animations.js" defer></script>
 
-
+ <script src="./gallery.js" defer></script>
 
 
   <script src="./script.js" defer></script>
@@ -55,14 +55,16 @@
 
         <div class="profile-image">
 
-          <img src="./resources/rpddp.jpg"
+          <img src="./resources/rpd-insta-logo.jpg"
             alt="">
 
         </div>
 
         <div class="profile-user-settings flex flex-row flex-wrap gap-1 items-center">
           <h3 class="profile-user-name">RPD Events</h3>
-          <button class="rpd-button-secondary" onclick='window.location.href="https://www.instagram.com/rpd.sound/"'>FOLLOW +</button>
+<button class="rpd-button-secondary" onclick='window.open("https://www.instagram.com/rpd_events?igsh=MWp5dzlpbWF5NzBuag==", "_blank")'>
+  FOLLOW +
+</button>
         </div>
 
         <div class="profile-stats">
@@ -77,8 +79,9 @@
 
         <div class="profile-bio">
 
-          <p><span class="profile-real-name">Jane Doe</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit
-            📷✈️🏕️</p>
+          <p> We do a numerous amount of things like: Live DJ, DJ Setup, House LED decor, live sound, bhangra, etc.
+Contact if you need any service at:
+778-861-0450</p>
 
         </div>
 
@@ -125,17 +128,22 @@
 
     <section class="subscription-box">
       <div class="sub-box flex flex-row column-gap-2 items-center justify-between">
-        <div class="sub-box-title">
+        <div class="sub-box-title" id="subBoxTitle">
           <h4>Join Us !</h4>
         </div>
-        <div class="sub-box-content">
+        <div class="sub-box-content" id="subBoxContent">
 
-          <div class="sub-input-container">
-            <input type="email" class="subscribe-input" placeholder="Enter your email" />
-            <button class="subscribe-button"><i class="fa-solid fa-paper-plane"></i></button>
-          </div>
+          <form class="sub-input-container" onsubmit="handleSubscribe(event)">
+            <input type="email" class="subscribe-input" placeholder="Enter your email" required />
+            <button type="submit" class="subscribe-button">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+
 
         </div>
+        <div class="sub-success"  id="subSuccess"> <h3 class="color-accent">Thank you</h3> <h4>You have been subscribe to RPD Events !</h4></div>
+         <div class="sub-fail" id="subFail"> <p class="color-accent">Oops !</p> <p>Please try again after refreshing the page</p></div>
       </div>
 
     </section>

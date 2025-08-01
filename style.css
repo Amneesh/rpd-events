@@ -1080,15 +1080,24 @@ img{
 
 /* footer */
 
+.sub-box{
+  width: 100%;
+}
+
 .sub-box-title{
+  
+
   width: 20%;
 }
 .sub-box-content{
+
+
   max-width: 350px;
   width: 80%;
 }
 
 .sub-input-container {
+ 
   position: relative;
 
   width: 100%;
@@ -1152,6 +1161,12 @@ img{
   }
 }
 
+.sub-success{
+display: none;
+}
+.sub-fail{
+display: none;
+}
 /* .subscription-box::after {
   pointer-events: none;
     content: "";
