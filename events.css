@@ -203,21 +203,14 @@ padding: 0.5rem 4rem 1rem 1rem;
   margin: 0 auto;
   width: 100%;
   max-width: 300px;
-  transition: 0.25s ease;
- transform: rotate(5deg);
+  padding: 5px 5px 50px 5px;
+  background-color: var(--color-accent-light);
+
  
 }
 
 
-.why-us-card {
-  aspect-ratio: 3 / 2;
-  background-color: var(--primary-white-color);
-  position: relative;
-  transition: 0.15s ease;
-  cursor: pointer;
-  padding: 5% 5% 15% 5%;
 
-}
 #main-why-us-image {
   width: 100%;
   border: 4px solid var(--primary-black-color);
@@ -230,9 +223,7 @@ padding: 0.5rem 4rem 1rem 1rem;
 
 }
 
-.browser-warning {
-  margin-bottom: 4rem;
-}
+
 
 
 
