@@ -96,7 +96,7 @@
     .profile {
         display: flex;
         flex-wrap: wrap;
-        padding: 4rem 0;
+        padding: 4rem 1rem;
     }
 
     .profile::after {
