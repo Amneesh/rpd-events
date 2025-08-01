@@ -58,6 +58,11 @@ main {
   margin: 0;
 }
 
+body.loaded {
+  visibility: visible;
+  opacity: 1;
+}
+
 h1 {
   text-transform: uppercase;
   font-family: "Space Grotesk", sans-serif;

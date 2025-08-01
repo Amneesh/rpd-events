@@ -1,3 +1,6 @@
+ window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
 const toggleBtn1 = document.getElementById('menu-toggle');
 const menu = document.getElementById('slide-menu');
 
