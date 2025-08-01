@@ -325,7 +325,7 @@ height: 50px;
 }
 
 
-#slide-menu.open {
+#slide-menu.active {
   transform: translateX(0);
    visibility: visible; /* <- now shows smoothly */
 }

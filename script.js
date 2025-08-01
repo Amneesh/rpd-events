@@ -5,9 +5,25 @@ const toggleBtn1 = document.getElementById('menu-toggle');
 const menu = document.getElementById('slide-menu');
 
 toggleBtn1.addEventListener('click', () => {
-  toggleBtn1.classList.toggle('open');
-  menu.classList.toggle('open');
+  const isOpen = menu.classList.contains('active');
+
+  if (isOpen) {
+    // Start slide-out
+    menu.classList.remove('active');
+    toggleBtn1.classList.remove('open');
+
+    // Delay hiding visibility to let transform finish
+    setTimeout(() => {
+      menu.style.visibility = 'hidden';
+    }, 400); // match transition duration
+  } else {
+    // Show and slide-in
+    menu.style.visibility = 'visible';
+    menu.classList.add('active');
+    toggleBtn1.classList.add('open');
+  }
 });
+
 
 const toggleBtn = document.getElementById('toggleSocial');
 const socialPopup = document.getElementById('socialPopup');
@@ -52,15 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-
-
-
-if (document.body.classList.contains("contact-page")) {
-
-
-
-}
 
 
 
