@@ -176,9 +176,9 @@ if (document.body.classList.contains("home-page")) {
       entries.forEach(entry => {
         if (entry.isIntersecting && !hasAnimated) {
           hasAnimated = true;
-          counter("count1", 0, 400, 3000);
-          counter("count2", 100, 50, 2500);
-          counter("count3", 0, 40, 3000);
+          counter("count1", 3000, 4000, 200);
+          counter("count2", 400, 500, 2500);
+          counter("count3", 300, 400, 3000);
           // counter("count4", 0, 40, 3000);
         }
       });

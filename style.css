@@ -894,7 +894,7 @@ img{
   background-size: cover;
   background-position: center;
 
-  opacity: 0.3; /* adjust opacity here */
+  opacity: 0.6; /* adjust opacity here */
   z-index: -1;
 }
 

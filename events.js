@@ -77,10 +77,10 @@ const servicesData = [
     img: "./resources/services-detail/dj.jpg",
   },
   {
-    id: "photography",
-    title: "PHOTOGRAPHY",
+    id: "jaago-night",
+    title: "Jaago Night",
     description:
-      "Our photography and videography services capture every unforgettable moment with clarity, creativity, and storytelling finesse. From candid emotions to cinematic wedding films, we cover events with a journalistic eye and professional-grade equipment. Services include pre-event shoots, drone coverage, highlight reels, photo booths, and next-day edits. Whether you want traditional portraits, slow-motion footage, or modern reels for social media, we deliver polished memories that last a lifetime.",
+      "Jaago Night by RPD Events is our signature all-night celebration that keeps the vibe alive till sunrise. With non-stop music, dazzling lights, and a crowd that refuses to slow down, it’s where unforgettable memories are made. When the city sleeps, we turn up the energy and own the night.",
     img: "./resources/services-detail/photography.jpg",
   },
   {
@@ -116,7 +116,7 @@ const servicesData = [
 
 window.addEventListener("load", () => {
   const swiper = new Swiper("#servicesCarousel", {
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

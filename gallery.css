@@ -187,6 +187,17 @@
 
 /* gallery container */
 
+.button-group {
+ padding: 2rem;
+  cursor: pointer;
+}
+
+.button-group button.active {
+  background-color: var(--color-accent);
+  color: var(--color-primary-black);
+}
+
+
 
 .img-grid {
   display: flex;

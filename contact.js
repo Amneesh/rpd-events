@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const contactFormHeading = document.querySelector("#contactFormHeading");
     const contactFormSuccessHeading = document.querySelector("#contactFormSuccessHeading");
 
-    const to = "amneeshsingh5@gmail.com";
+    const to = "rpd.surrey@gmail.com";
     const subject = `RPD EVENTS website inquiry from ${name}`;
     const html = `
       <h2>New Inquiry from Website</h2>
