@@ -306,8 +306,13 @@
   
   
 }
-
-
+.gallery-grid{
+  video{
+    aspect-ratio: 1/1;
+    object-fit: contain;
+  }
+  padding: 1rem;
+}
 .gallery-join-us{
   margin: 5rem 0rem;
 }

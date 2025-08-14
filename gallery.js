@@ -106,7 +106,7 @@ btnImages.addEventListener('click', async () => {
 btnVideos.addEventListener('click', async () => {
   btnVideos.classList.add('active');
   btnImages.classList.remove('active');
-  videoGrid.style.display = 'grid';
+  videoGrid.style.display = 'flex';
   imageGrid.style.display = 'none';
 
   if (!cachedVideos) {
