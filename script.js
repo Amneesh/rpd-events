@@ -214,7 +214,7 @@ if (document.body.classList.contains("home-page")) {
         <p>${truncateWords(test.text, 10)}</p>
         </div>
         <div class="t-card-footer flex flex-row justify-between items-center">
-         <img src="./resources/google-logo.png" class="google-logo" alt="">
+         <img src="./resources/google-logo.webp" class="google-logo" alt="">
           <p> ${test.role}</p>
         </div>
       </div>

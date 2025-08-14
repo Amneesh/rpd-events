@@ -17,6 +17,7 @@
   --color-primary: #ff00ff; /* Neon Magenta */
   --color-primary-light: #ff66ff;
   --color-primary-dark: #cc00cc;
+  --color-primary-darkest:#790079;
 
   /* Accent Colors */
   --color-accent: #ceff1c; /* Cyan / Teal contrast */
@@ -692,27 +693,21 @@ img{
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
-.who-we-are-content {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
 
 .image-side {
   position: relative;
-  flex: 1 1 400px;
-  height: 50vh;
-  min-width: 300px;
+max-width: 600px;
+  min-width: 200px;
   overflow: visible;
 }
 
 .image-side img {
   width: 100%;
+  aspect-ratio: 3/2;
   height: auto;
   display: block;
   object-fit: cover;
@@ -790,7 +785,7 @@ img{
   padding: 3rem 1rem;
   color: var(--color-text);
   border-radius: 20px;
-  background-color: var(--color-surface);
+  background-color: var(--color-primary-darkest);
 }
 @keyframes shake {
   0% {
@@ -876,6 +871,7 @@ img{
 /* services */
 
 .services-section {
+ 
   background-color: var(--primary-black-color);
   color: var(--color-text);
   padding: 4rem 2rem;
@@ -890,7 +886,7 @@ img{
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("./resources/services-bg.jpg");
+  background: url("./resources/services-bg.webp");
   background-size: cover;
   background-position: center;
 
@@ -899,6 +895,8 @@ img{
 }
 
 .services-container {
+   max-width: 1600px;
+  margin: 0 auto;
   padding: 1rem 2rem;
 }
 
@@ -1307,22 +1305,22 @@ display: none;
 .testimonial-section::before {
     content: "❝";
     position: absolute;
-    top: 12%;
-    left: 0rem;
-    font-size: clamp(8rem, 4vw, 12rem);
-    color: rgb(133, 133, 133);
+    top: 20%;
+    left: 3%;
+    font-size: clamp(10rem, 4vw, 13rem);
+    color: var(--color-accent-dark);
     z-index: 1;
 }
 
 .testimonial-section::after {
   content: "";
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
   height: 60%;
-  background: rgba(255, 255, 255, 0.05);
+  background: #dff98348;
   border-radius: 20px;
   z-index: 0;
   pointer-events: none;

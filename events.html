@@ -27,7 +27,7 @@
   <header class="rpd-header">
 
     <div class="rpd-logo">
-      <a href="./index.html"><img src="./resources/rpd-logo.png" alt="" /></a>
+      <a href="./index.html"><img src="./resources/rpd-logo.webp" alt="" /></a>
 
     </div>
     <div class="header">
@@ -61,20 +61,20 @@
 
         <article class="event-tile ">
           <h2 class="visually-hidden">Weddings</h2>
-          <img src="./resources/wedding.jpg"
+          <img src="./resources/wedding.webp"
             alt="Wedding celebration with flowers and lights">
           <div class="event-tile-description flex flex-col justify-center items-center gap-1">
-            <strong>Weddings:</strong>
+            <h2>Weddings:</h2>
             <p>From elegant ceremonies to vibrant receptions, we turn your big day into a beautiful memory.</p>
           </div>
         </article>
 
         <article class="event-tile">
           <h2 class="visually-hidden">Corporate Events</h2>
-          <img src="resources/corporate.jpg"
+          <img src="resources/corporate.webp"
             alt="Corporate event setup with stage and lighting">
           <div class="event-tile-description flex flex-col justify-center items-center gap-1">
-            <strong>Corporate Events:</strong>
+            <h2>Corporate Events:</h2>
             <p>Professional AV setups, smooth logistics, and impressive presentations tailored for your business goals.
             </p>
           </div>
@@ -82,20 +82,20 @@
 
         <article class="event-tile">
           <h2 class="visually-hidden">Birthday Parties</h2>
-          <img src="./resources/birthday.jpg"
+          <img src="./resources/birthday.webp"
             alt="Birthday party with balloons and cake">
           <div class="event-tile-description flex flex-col justify-center items-center gap-1">
-            <strong>Birthday Parties:</strong>
+            <h2>Birthday Parties:</h2>
             <p>Celebrate in style with themed decor, entertainment, and custom experiences for all ages.</p>
           </div>
         </article>
 
         <article class="event-tile">
           <h2 class="visually-hidden">Live Concerts</h2>
-          <img src="resources/live.jpg"
+          <img src="resources/live.webp"
             alt="Concert lighting and audience in a music event">
           <div class="event-tile-description flex flex-col justify-center items-center gap-1">
-            <strong>Live Concerts:</strong>
+            <h2>Live Concerts:</h2>
             <p>Bring your stage to life with high-quality sound, lighting, and visual effects tailored for artists and
               fans.</p>
           </div>
@@ -103,10 +103,10 @@
 
         <article class="event-tile">
           <h2 class="visually-hidden">Engagements</h2>
-          <img src="./resources/engagement.jpg"
+          <img src="./resources/engagement.webp"
             alt="Couple dancing during an engagement party">
           <div class="event-tile-description flex flex-col justify-center items-center gap-1">
-            <strong>Engagements:</strong>
+            <h2>Engagements:</h2>
             <p>Celebrate your journey together with a beautifully coordinated and intimate engagement event.</p>
           </div>
         </article>
@@ -116,17 +116,17 @@
           <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80"
             alt="Cultural festival stage with traditional performers">
           <div class="event-tile-description flex flex-col justify-center items-center gap-1">
-            <strong>Cultural Shows:</strong>
+            <h2>Cultural Shows:</h2>
             <p>Showcasing rich traditions through music, dance, and storytelling with our stage and tech expertise.</p>
           </div>
         </article>
 
         <article class="event-tile">
           <h2 class="visually-hidden">DJ Nights</h2>
-          <img src="./resources/djnight.jpg"
+          <img src="./resources/djnight.webp"
             alt="DJ performing at a lively party">
           <div class="event-tile-description flex flex-col justify-center items-center gap-1">
-            <strong>DJ Nights:</strong>
+            <h2>DJ Nights:</h2>
             <p>High-energy lighting and sound to get the crowd moving and make your party unforgettable.</p>
           </div>
         </article>
@@ -136,7 +136,7 @@
           <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=400&q=80"
             alt="Outdoor event with food stalls and people gathering">
           <div class="event-tile-description flex flex-col justify-center items-center gap-1">
-            <strong>Community Events:</strong>
+            <h2>Community Events:</h2>
             <p>Creating memorable community experiences with thoughtful planning and professional support.</p>
           </div>
         </article>
@@ -144,14 +144,29 @@
 
     </section>
 
+
+     <section id="serviceDetails" class="service-details flex flex-col justify-center items-center gap-1">
+      <h1>Service <span class="color-accent">Offerings</span></h1>
+      <div class="underline"></div>
+      <div class="swiper-container" id="servicesCarousel">
+        <div class="swiper-wrapper" id="swiperWrapper">
+          <!-- Slides inserted dynamically by JS -->
+        </div>
+        <!-- Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+      </div>
+    </section>
+
     <section class="why-us flex flex-col items-center justify-center gap-1">
   <h1>WHY CHOOSE <span class="color-accent">RPD</span></h1>
    <div class="underline"></div>
-      <div class="why-us-container flex flex-col lg:flex-row items-center justify-around gap-6">
+      <div class="why-us-container flex flex-col lg:flex-row items-center justify-around row-gap-3 column-gap-6">
         <div class="why-us-description">
 
-          <div data-image="./resources/event-bg.webp" class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right" >
-            <div class="why-us-image"><img src="./resources/why-us-icons/unmatched.png" alt=""></div>
+          <div data-image="./resources/why-us-images/unmatched-expertise.webp" class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right" >
+            <div class="why-us-image"><img src="./resources/why-us-icons/unmatched.webp" alt=""></div>
             <div class="why-us-text">
               <h4>Unmatched Expertise</h4>
               <p>
@@ -160,8 +175,8 @@
             </div>
           </div>
 
-          <div data-image="./resources/why-us-icons/complete-package.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
-            <div class="why-us-image"><img src="./resources/why-us-icons/complete.png" alt=""></div>
+          <div data-image="./resources/why-us-images/complete-party-package.webp" class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
+            <div class="why-us-image"><img src="./resources/why-us-icons/complete.webp" alt=""></div>
             <div class="why-us-text">
               <h4>Complete Party Package</h4>
               <p>
@@ -170,8 +185,8 @@
             </div>
           </div>
 
-          <div data-image="./resources/dj-contact.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right">
-            <div class="why-us-image"><img src="./resources/why-us-icons/seamless.png" alt=""></div>
+          <div data-image="./resources/why-us-images/seamless-execution.webp" class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right">
+            <div class="why-us-image"><img src="./resources/why-us-icons/seamless.webp" alt=""></div>
             <div class="why-us-text">
               <h4>Seamless Execution</h4>
               <p>
@@ -186,15 +201,15 @@
         
           <div class="stack">
            
-              <div class="image"><img id="main-why-us-image" src="./resources/dj-contact.jpg" alt="dj-front"></div>
+              <div class="image"><img id="main-why-us-image" src="./resources/dj-contact.webp" alt="dj-front"></div>
       
           </div>
 
         </div>
         <div class="why-us-description">
           
-          <div data-image="./resources/dj-contact.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
-            <div class="why-us-image"><img src="./resources/why-us-icons/customized.png" alt=""></div>
+          <div data-image="./resources/why-us-images/customized-vision.webp" class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
+            <div class="why-us-image"><img src="./resources/why-us-icons/customized.webp" alt=""></div>
             <div class="why-us-text">
               <h4>Customized to Your Vision</h4>
               <p>
@@ -203,8 +218,8 @@
             </div>
           </div>
 
-          <div data-image="./resources/dj-contact.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right">
-            <div class="why-us-image"><img src="./resources/why-us-icons/vibrant.png" alt=""></div>
+          <div data-image="./resources/why-us-images/vibrant.webp" class="why-point flex flex-row justify-between align-start gap-1 why-left animate-slide-right">
+            <div class="why-us-image"><img src="./resources/why-us-icons/vibrant.webp" alt=""></div>
             <div class="why-us-text">
               <h4>Vibrant Cultural Touch</h4>
               <p>
@@ -213,8 +228,8 @@ Infusing every celebration with the rich energy of Punjabi, Bollywood, and South
             </div>
           </div>
 
-          <div data-image="./resources/dj-contact.jpg" class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
-            <div class="why-us-image"><img src="./resources/why-us-icons/client.png" alt=""></div>
+          <div data-image="./resources/why-us-images/client-satisfaction.webp" class="why-point flex flex-row justify-between align-start gap-1 why-right animate-slide-left">
+            <div class="why-us-image"><img src="./resources/why-us-icons/client.webp" alt=""></div>
             <div class="why-us-text">
               <h4>Client Satisfaction First</h4>
               <p>
@@ -227,25 +242,14 @@ Infusing every celebration with the rich energy of Punjabi, Bollywood, and South
     </section>
 
 
-    <section class="join-us shake-effect">
+    <section class="join-us join-us-events shake-effect">
       <div class="join-us-container flex flex-col items-center justify-center gap-1">
         <h1>Some call it extra. We call it <span class="color-accent">RPD</span> ! </h1>
         <button class="rpd-button-secondary go-to-contact">GET A QUOTE</button>
       </div>
     </section>
 
-    <section id="serviceDetails" class="service-details">
-      <h2 class="visually-hidden">Service Details</h2>
-      <div class="swiper-container" id="servicesCarousel">
-        <div class="swiper-wrapper" id="swiperWrapper">
-          <!-- Slides inserted dynamically by JS -->
-        </div>
-        <!-- Navigation -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-
-      </div>
-    </section>
+   
 
 
 
@@ -320,7 +324,7 @@ Infusing every celebration with the rich energy of Punjabi, Bollywood, and South
     <section class="footer-info">
       <h4 class="visually-hidden">Logo and description</h4>
       <a class="footer-logo" href="#top">
-        <img src="./resources/rpd-logo.png" alt="RPD logo" />
+        <img src="./resources/rpd-logo.webp" alt="RPD logo" />
       </a>
       <div class="footer-description">
         <p>RPD </p>

@@ -18,7 +18,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("./resources/contact-bg.jpg");
+  background-image: url("./resources/contact-bg.webp");
   background-size: cover;
   background-position: top;
 
@@ -174,7 +174,7 @@ form textarea:focus {
   position: absolute;
   inset: 0;
   transform: rotate(180deg);
-  background-image: url("./resources/contact-bg.jpg");
+  background-image: url("./resources/contact-bg.webp");
   background-size: cover;
   background-position: top;
 
